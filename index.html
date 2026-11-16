@@ -3,37 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>接龍：經典紙牌遊戲</title>
+<title>yusakuron 的遊戲</title>
+<meta name="description" content="接龍：經典紙牌遊戲、極速踩地雷 — yusakuron 開發的 Android 遊戲">
 <style>
   :root { color-scheme: light; }
+  * { box-sizing: border-box; }
   body {
     margin: 0;
     font-family: -apple-system, "Segoe UI", "Noto Sans TC", sans-serif;
-    background: linear-gradient(180deg, #0B6B3A 0%, #0d4d2c 100%);
+    background: linear-gradient(180deg, #1f2a44 0%, #121a2c 100%);
     color: #fff;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    box-sizing: border-box;
+    padding: 40px 16px;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  header h1 {
+    font-size: 28px;
+    margin: 0 0 6px;
+  }
+  header p {
+    margin: 0;
+    opacity: 0.75;
+  }
+  .apps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
   }
   .card {
-    max-width: 480px;
-    width: 100%;
+    border-radius: 20px;
+    padding: 28px 24px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   }
-  h1 {
-    font-size: 32px;
-    margin: 16px 0 8px;
+  .card.solitaire {
+    background: linear-gradient(180deg, #0B6B3A 0%, #0d4d2c 100%);
+    --accent: #0B6B3A;
+    --muted: #cde9d8;
   }
-  p {
+  .card.minesweeper {
+    background: linear-gradient(180deg, #2E5BBA 0%, #1d3c80 100%);
+    --accent: #2E5BBA;
+    --muted: #d3e0fb;
+  }
+  .emoji {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 24px;
+    margin: 12px 0 8px;
+  }
+  .card p {
     font-size: 16px;
     line-height: 1.6;
     opacity: 0.9;
+    margin: 0;
+    flex: 1;
   }
   .links {
-    margin-top: 32px;
+    margin-top: 24px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -41,7 +78,7 @@
   a.button {
     display: block;
     background: #fff;
-    color: #0B6B3A;
+    color: var(--accent);
     text-decoration: none;
     font-weight: bold;
     padding: 14px;
@@ -49,28 +86,61 @@
     font-size: 16px;
   }
   a.text-link {
-    color: #cde9d8;
+    color: var(--muted);
     font-size: 14px;
     text-decoration: underline;
   }
-  .emoji {
-    font-size: 56px;
+  footer {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  footer a {
+    color: inherit;
   }
 </style>
 </head>
 <body>
-  <div class="card">
-    <div class="emoji">🃏</div>
-    <h1>接龍：經典紙牌遊戲</h1>
-    <p>經典克朗代克紙牌接龍，保證可解的每日挑戰、精美主題與離線遊玩。</p>
-    <div class="links">
-      <a class="button" href="https://play.google.com/store/apps/details?id=com.yusakuron.solitaire">
-        在 Google Play 下載
-      </a>
-      <a class="text-link" href="https://yusakuron4-hub.github.io/solitaire-privacy-policy/">
-        隱私權政策
-      </a>
+  <div class="wrap">
+    <header>
+      <h1>yusakuron 的遊戲</h1>
+      <p>簡單、好上手的 Android 遊戲</p>
+    </header>
+
+    <div class="apps">
+      <section class="card solitaire">
+        <div class="emoji">🃏</div>
+        <h2>接龍：經典紙牌遊戲</h2>
+        <p>經典克朗代克紙牌接龍，保證可解的每日挑戰、精美主題與離線遊玩。</p>
+        <div class="links">
+          <a class="button" href="https://play.google.com/store/apps/details?id=com.yusakuron.solitaire">
+            在 Google Play 下載
+          </a>
+          <a class="text-link" href="https://yusakuron4-hub.github.io/solitaire-privacy-policy/">
+            隱私權政策
+          </a>
+        </div>
+      </section>
+
+      <section class="card minesweeper">
+        <div class="emoji">💣</div>
+        <h2>極速踩地雷</h2>
+        <p>為速度而生的經典踩地雷：初級／中級／高級盤面、100 關冒險模式、每日競速，以及 Google Play 遊戲全球排行榜與成就。</p>
+        <div class="links">
+          <a class="button" href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed">
+            在 Google Play 下載
+          </a>
+          <a class="text-link" href="https://yusakuron4-hub.github.io/minesweeper-speed-privacy-policy/">
+            隱私權政策
+          </a>
+        </div>
+      </section>
     </div>
+
+    <footer>
+      聯絡我們：<a href="mailto:yusakuron4@gmail.com">yusakuron4@gmail.com</a>
+    </footer>
   </div>
 </body>
 </html>
