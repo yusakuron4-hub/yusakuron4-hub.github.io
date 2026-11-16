@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yusakuron4-hub.github.io/sitemap.xml

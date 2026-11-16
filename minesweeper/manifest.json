@@ -1,0 +1,15 @@
+{
+  "name": "線上踩地雷 - 極速踩地雷",
+  "short_name": "踩地雷",
+  "description": "免費線上踩地雷，第一下必安全，免猜純邏輯模式。",
+  "lang": "zh-Hant-TW",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F3F0EB",
+  "theme_color": "#F3F0EB",
+  "icons": [
+    { "src": "../minesweeper-speed-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

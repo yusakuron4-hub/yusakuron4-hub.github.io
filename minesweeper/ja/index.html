@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>マインスイーパー オンライン｜無料・インストール不要 - スピード マインスイーパー</title>
+<meta name="description" content="無料のオンライン マインスイーパー。ダウンロード・登録不要ですぐ遊べます。初級・中級・上級、最初の1手は必ず安全、運要素なしモードも。ルール、コツ、よくある質問つき。">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<link rel="alternate" hreflang="zh-TW" href="https://yusakuron4-hub.github.io/minesweeper/">
+<link rel="alternate" hreflang="zh-CN" href="https://yusakuron4-hub.github.io/minesweeper/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<link rel="alternate" hreflang="ja" href="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<link rel="alternate" hreflang="ko" href="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<link rel="alternate" hreflang="es" href="https://yusakuron4-hub.github.io/minesweeper/es/">
+<link rel="alternate" hreflang="fr" href="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<link rel="alternate" hreflang="pt" href="https://yusakuron4-hub.github.io/minesweeper/pt/">
+<link rel="alternate" hreflang="ru" href="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<link rel="alternate" hreflang="ar" href="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<link rel="alternate" hreflang="x-default" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<meta name="theme-color" content="#F3F0EB">
+<link rel="icon" type="image/png" href="../../minesweeper-speed-icon.png">
+<link rel="apple-touch-icon" href="../../minesweeper-speed-icon.png">
+<link rel="manifest" href="../manifest.json">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="スピード マインスイーパー">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:url" content="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<meta property="og:title" content="マインスイーパー オンライン｜無料・インストール不要">
+<meta property="og:description" content="ブラウザで遊べる定番マインスイーパー。初級・中級・上級、最初の1手は安全、運要素なしモード搭載。自己ベストに挑戦！">
+<meta property="og:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="マインスイーパー オンライン｜無料・インストール不要">
+<meta name="twitter:description" content="ブラウザで遊べる定番マインスイーパー。初級・中級・上級、最初の1手は安全、運要素なしモード搭載。自己ベストに挑戦！">
+<meta name="twitter:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+
+<script>
+  // 語系：使用者選過就照選的；第一次來依瀏覽器語言自動選。搜尋引擎爬蟲不轉址。
+  (function () {
+    var LANGS = {"zh-TW":"../","zh-CN":"../zh-cn/","en":"../en/","ja":"../ja/","ko":"../ko/","es":"../es/","fr":"../fr/","pt":"../pt/","ru":"../ru/","ar":"../ar/"};
+    var CUR = 'ja';
+    if (/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit/i.test(navigator.userAgent)) return;
+    function detect() {
+      var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < list.length; i++) {
+        var t = String(list[i]).toLowerCase();
+        if (t.indexOf('zh') === 0) return /hans|-cn|-sg|-my/.test(t) && t.indexOf('hant') < 0 ? 'zh-CN' : 'zh-TW';
+        var b = t.split('-')[0];
+        if (LANGS[b]) return b;
+      }
+      return 'en';
+    }
+    var want = null;
+    try { want = JSON.parse(localStorage.getItem('ms_lang')); } catch (e) {}
+    if (!want || !LANGS[want]) {
+      want = detect();
+      try { localStorage.setItem('ms_lang', JSON.stringify(want)); } catch (e) {}
+    }
+    if (want !== CUR) location.replace(LANGS[want] + location.hash);
+  })();
+  // 先套用主題，避免畫面閃一下
+  (function () {
+    var d = document.documentElement;
+    try {
+      var t = JSON.parse(localStorage.getItem('ms_theme'));
+      var k = JSON.parse(localStorage.getItem('ms_dark'));
+      d.dataset.theme = t || 'clean';
+      d.dataset.dark = (k == null ? matchMedia('(prefers-color-scheme: dark)').matches : k) ? '1' : '0';
+    } catch (e) {
+      d.dataset.theme = 'clean';
+      d.dataset.dark = '0';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+<style>body { font-family: -apple-system, "Segoe UI", "Noto Sans JP", "Yu Gothic UI", "Meiryo", sans-serif; }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "VideoGame",
+        "WebApplication"
+      ],
+      "@id": "https://yusakuron4-hub.github.io/minesweeper/ja/#game",
+      "name": "マインスイーパー オンライン - スピード マインスイーパー",
+      "alternateName": [
+        "マインスイーパー",
+        "Minesweeper"
+      ],
+      "url": "https://yusakuron4-hub.github.io/minesweeper/ja/",
+      "description": "無料のオンライン マインスイーパー。ダウンロード・登録不要ですぐ遊べます。初級・中級・上級、最初の1手は必ず安全、運要素なしモードも。ルール、コツ、よくある質問つき。",
+      "genre": [
+        "Puzzle",
+        "Logic"
+      ],
+      "gamePlatform": [
+        "Web browser",
+        "Android"
+      ],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "playMode": "SinglePlayer",
+      "inLanguage": "ja",
+      "isAccessibleForFree": true,
+      "image": "https://yusakuron4-hub.github.io/minesweeper-speed-feature.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "yusakuron",
+        "url": "https://yusakuron4-hub.github.io/"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "yusakuron のゲーム",
+          "item": "https://yusakuron4-hub.github.io/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "マインスイーパー オンライン",
+          "item": "https://yusakuron4-hub.github.io/minesweeper/ja/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ダウンロードは必要ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不要です。PC でもスマホでもブラウザですぐ遊べます。インストールや登録もいりません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "数字の意味は？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "そのマスの周囲 8 マスにある地雷の数です。1 なら周りにちょうど 1 個、空白なら 0 個で、周囲が自動で開きます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "最初の1手で地雷を踏むことはありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ありません。最初にクリックしたマスとその周囲 8 マスには地雷が置かれません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "運要素なしモードとは？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "すべての盤面が推理だけで解けるので、どうしても運任せになる二択が出ません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "スマホで旗を立てるには？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "マスを長押しするか、盤面の下で「旗」モードに切り替えてタップします。PC では右クリックです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ベスト記録は保存されますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、この端末のブラウザに保存されます。閲覧データを消すと消えます。世界と競うならアプリの世界ランキングをどうぞ。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Windows の定番マインスイーパーと同じですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。ルールも初級・中級・上級の盤面サイズも同じで、最初の1手が必ず安全です。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../ja/">
+      <img src="../../minesweeper-speed-icon.png" alt="" width="32" height="32">
+      <span class="brand-name">スピード マインスイーパー</span>
+    </a>
+    <label class="lang-select">
+      <span aria-hidden="true">🌐</span>
+      <select id="lang" aria-label="言語">
+        <option value="zh-TW" data-href="../">繁體中文</option>
+        <option value="zh-CN" data-href="../zh-cn/">简体中文</option>
+        <option value="en" data-href="../en/">English</option>
+        <option value="ja" data-href="../ja/" selected>日本語</option>
+        <option value="ko" data-href="../ko/">한국어</option>
+        <option value="es" data-href="../es/">Español</option>
+        <option value="fr" data-href="../fr/">Français</option>
+        <option value="pt" data-href="../pt/">Português</option>
+        <option value="ru" data-href="../ru/">Русский</option>
+        <option value="ar" data-href="../ar/">العربية</option>
+      </select>
+    </label>
+    <a class="get-app" data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ja&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">アプリを入手</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>マインスイーパー オンライン</h1>
+      <p>無料・インストール不要ですぐ遊べます。最初の1手は必ず安全、運要素なしモードも選べます。</p>
+    </section>
+
+    <section id="game" aria-label="マインスイーパー" data-status="ready">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="難易度">
+          <button type="button" data-level="beginner">初級</button>
+          <button type="button" data-level="intermediate">中級</button>
+          <button type="button" data-level="expert">上級</button>
+        </div>
+        <label class="toggle" title="すべての盤面が推理だけで解けます">
+          <input type="checkbox" id="noguess"> 運要素なし
+        </label>
+        <span class="spacer"></span>
+        <button type="button" class="chip-btn" id="theme-btn">テーマ：クリーン</button>
+        <button type="button" class="chip-btn" id="dark-btn">🌙 ダーク</button>
+      </div>
+
+      <div class="hud">
+        <div class="counter" aria-label="残りの地雷">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pole" d="M7 3.5v17" /><path class="cloth" d="M8 4l10 4.2L8 12.4z" /><path class="pole" d="M4.5 20.5h6" /></svg>
+          <span id="mine-counter">10</span>
+        </div>
+        <button type="button" id="reset" aria-label="新しいゲーム"></button>
+        <div class="counter time" aria-label="タイム"><span id="timer">00:00.00</span></div>
+      </div>
+
+      <div id="board-wrap">
+        <div id="board" role="grid" aria-label="マインスイーパーの盤面"></div>
+      </div>
+
+      <div class="below">
+        <div class="seg" role="group" aria-label="タップ操作">
+          <button type="button" data-mode="dig">⛏️ 開く</button>
+          <button type="button" data-mode="flag">🚩 旗</button>
+        </div>
+        <span class="spacer"></span>
+        <span id="best">記録なし</span>
+      </div>
+      <p class="hint">PC：左クリックで開く、右クリックで旗、数字をクリックで周囲を一括オープン。スマホ：タップで開く、長押しで旗。N キーで新しいゲーム。</p>
+    </section>
+
+    <aside class="app-banner" aria-label="アプリを入手">
+      <img src="../../minesweeper-speed-icon.png" alt="スピード マインスイーパー アプリのアイコン" width="64" height="64" loading="lazy">
+      <div>
+        <h2>もっと遊ぶなら「スピード マインスイーパー」アプリ</h2>
+        <p>全100ステージのアドベンチャー・デイリーレース・Google Play ゲームの世界ランキングと 25 個の実績・リプレイ</p>
+      </div>
+      <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ja&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">無料ダウンロード</a>
+    </aside>
+
+    <article>
+      <h2>マインスイーパーのルール</h2>
+      <ol>
+        <li><strong>目的</strong>：<strong>地雷ではない</strong>マスをすべて開けばクリア。地雷を開くとゲームオーバーです。</li>
+        <li><strong>数字</strong>：開いたマスの数字は、<strong>周囲 8 マス</strong>（斜めを含む）にある地雷の数です。</li>
+        <li><strong>空白</strong>：周りに地雷がないマスは空白になり、周囲が自動で一気に開きます。</li>
+        <li><strong>旗</strong>：地雷だと確信したマスに旗を立てると、うっかり開くのを防げます。左上の数字は「地雷の総数 − 旗の数」です。</li>
+        <li><strong>一括オープン</strong>：数字の周りに同じ数の旗が立っていれば、その数字をクリックすると残りの周囲マスを一度に開けます。旗が間違っていると地雷を開くので注意！</li>
+      </ol>
+
+      <h2>操作方法</h2>
+      <table>
+        <thead><tr><th>操作</th><th>PC</th><th>スマホ</th></tr></thead>
+        <tbody>
+          <tr><td>マスを開く</td><td>左クリック</td><td>タップ</td></tr>
+          <tr><td>旗を立てる／外す</td><td>右クリック</td><td>長押し、または「旗」モードでタップ</td></tr>
+          <tr><td>周囲を一括オープン</td><td>開いた数字をクリック（どのボタンでも可）</td><td>開いた数字をタップ</td></tr>
+          <tr><td>新しいゲーム</td><td>ニコちゃんボタン、または N / F2</td><td>ニコちゃんボタン</td></tr>
+        </tbody>
+      </table>
+
+      <h2>難易度</h2>
+      <table>
+        <thead><tr><th>難易度</th><th>盤面</th><th>地雷</th><th>密度</th></tr></thead>
+        <tbody>
+          <tr><td>初級</td><td>9 × 9</td><td>10</td><td>約 12%</td></tr>
+          <tr><td>中級</td><td>16 × 16</td><td>40</td><td>約 16%</td></tr>
+          <tr><td>上級</td><td>16 × 30（スマホ縦向きは 30 × 16）</td><td>99</td><td>約 21%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>初心者向けのコツ</h2>
+      <h3>1. 条件を満たした数字を探す</h3>
+      <p>数字の周りに同じ数の旗があれば、ほかの未開封マスはすべて安全です。開くか、数字をクリックして一括オープンしましょう。</p>
+
+      <h3>2. 未開封マスの数 = 数字なら全部地雷</h3>
+      <p>「3」の周りに未開封マスがちょうど 3 つなら、3 つとも地雷です。旗を立てましょう。</p>
+
+      <h3>3. 壁際の 1-2-1</h3>
+      <p>未開封マスの列に沿って 1-2-1 と並んでいたら、<strong>1 の向かいは地雷、2 の向かいは安全</strong>です。</p>
+      <div class="pattern-grid" aria-label="1-2-1">
+        <div class="pattern"><span class="m">💣</span><span class="s">✓</span><span class="m">💣</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>4. 壁際の 1-2-2-1</h3>
+      <p>1-2-2-1 なら、<strong>2 つの 2 の向かいが地雷、両端の 1 の向かいは安全</strong>です。</p>
+      <div class="pattern-grid" aria-label="1-2-2-1">
+        <div class="pattern"><span class="s">✓</span><span class="m">💣</span><span class="m">💣</span><span class="s">✓</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>5. 速くなるには：旗は最小限、一括オープンを多用</h3>
+      <p>上級者は一括オープンに必要な所だけ旗を立て、数字をクリックして広い範囲を一気に開きます。クリック数が大きく減ります。</p>
+      <p class="legend">💣＝地雷、✓＝安全。盤面の端や開いた範囲の隣によく現れます。</p>
+
+      <h2>運要素なし（純粋ロジック）モードとは？</h2>
+      <p>通常のマインスイーパーでは「2 マスのどちらかが地雷だが見分けがつかない」という二択が出ることがあります。<strong>運要素なし</strong>をオンにすると、最初のクリック後に盤面を作り、ソルバーで確認するので、<strong>必ず推理だけで解けます</strong>。勝敗はあなたの論理とスピード次第です。</p>
+
+      <h2>よくある質問</h2>
+      <h3>ダウンロードは必要ですか？</h3>
+      <p>不要です。PC でもスマホでもブラウザですぐ遊べます。インストールや登録もいりません。</p>
+      <h3>数字の意味は？</h3>
+      <p>そのマスの周囲 8 マスにある地雷の数です。1 なら周りにちょうど 1 個、空白なら 0 個で、周囲が自動で開きます。</p>
+      <h3>最初の1手で地雷を踏むことはありますか？</h3>
+      <p>ありません。最初にクリックしたマスとその周囲 8 マスには地雷が置かれません。</p>
+      <h3>運要素なしモードとは？</h3>
+      <p>すべての盤面が推理だけで解けるので、どうしても運任せになる二択が出ません。</p>
+      <h3>スマホで旗を立てるには？</h3>
+      <p>マスを長押しするか、盤面の下で「旗」モードに切り替えてタップします。PC では右クリックです。</p>
+      <h3>ベスト記録は保存されますか？</h3>
+      <p>はい、この端末のブラウザに保存されます。閲覧データを消すと消えます。世界と競うならアプリの世界ランキングをどうぞ。</p>
+      <h3>Windows の定番マインスイーパーと同じですか？</h3>
+      <p>はい。ルールも初級・中級・上級の盤面サイズも同じで、最初の1手が必ず安全です。</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="langs" aria-label="ほかの言語">
+      <a href="../" hreflang="zh-TW" lang="zh-Hant-TW" data-lang="zh-TW">繁體中文</a>
+      <a href="../zh-cn/" hreflang="zh-CN" lang="zh-Hans-CN" data-lang="zh-CN">简体中文</a>
+      <a href="../en/" hreflang="en" lang="en" data-lang="en">English</a>
+      <a href="../ja/" hreflang="ja" lang="ja" aria-current="page" data-lang="ja">日本語</a>
+      <a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a>
+      <a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a>
+      <a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      <a href="../pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a>
+      <a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+      <a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a>
+    </nav>
+    <p><a href="../../ja/">yusakuron のゲーム</a>・<a href="../../minesweeper-speed-privacy-policy/">プライバシーポリシー</a>・<a href="mailto:yusakuron4@gmail.com">お問い合わせ</a></p>
+    <p>© 2026 yusakuron</p>
+  </footer>
+
+  <div id="result" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <button type="button" id="result-close" aria-label="閉じる">×</button>
+      <h2 id="result-title">🎉 クリア！</h2>
+      <p id="result-time-label">クリアタイム</p>
+      <p id="result-time">00:00.00</p>
+      <span class="record" id="result-record" hidden>🏆 新記録！</span>
+      <p id="result-best"></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="result-view">盤面を見る</button>
+        <button type="button" class="btn primary" id="result-again">もう一度</button>
+      </div>
+      <div class="cta">
+        <img src="../../minesweeper-speed-icon.png" alt="" width="48" height="48">
+        <div>
+          <p id="result-cta-text"></p>
+          <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ja&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">無料でアプリを入手</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>window.MS_I18N = {"levels":{"beginner":"初級","intermediate":"中級","expert":"上級"},"boardAria":"{level}のマインスイーパー盤面、{rows} 行 × {cols} 列、地雷 {mines} 個","best":"ベスト {t}","noRecord":"記録なし","themeClean":"テーマ：クリーン","themeRetro":"テーマ：クラシックレトロ","dark":"🌙 ダーク","light":"☀️ ライト","win":"🎉 クリア！","lose":"💥 地雷を踏んでしまった","bestRecord":"{level}のベスト {t}","ctaWin":"{s} 秒でクリア！アプリで世界とスピード勝負しよう。","ctaLose":"アプリなら全100ステージのアドベンチャー、デイリーレース、世界ランキング。"};</script>
+  <script src="../game.js" defer></script>
+</body>
+</html>

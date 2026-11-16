@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>지뢰찾기 온라인｜무료・설치 없이 바로 플레이 - 스피드 지뢰찾기</title>
+<meta name="description" content="무료 온라인 지뢰찾기. 다운로드·가입 없이 바로 플레이하세요. 초급·중급·고급, 첫 클릭은 항상 안전, 추측 없는 모드까지. 규칙, 팁, 자주 묻는 질문 포함.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<link rel="alternate" hreflang="zh-TW" href="https://yusakuron4-hub.github.io/minesweeper/">
+<link rel="alternate" hreflang="zh-CN" href="https://yusakuron4-hub.github.io/minesweeper/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<link rel="alternate" hreflang="ja" href="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<link rel="alternate" hreflang="ko" href="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<link rel="alternate" hreflang="es" href="https://yusakuron4-hub.github.io/minesweeper/es/">
+<link rel="alternate" hreflang="fr" href="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<link rel="alternate" hreflang="pt" href="https://yusakuron4-hub.github.io/minesweeper/pt/">
+<link rel="alternate" hreflang="ru" href="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<link rel="alternate" hreflang="ar" href="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<link rel="alternate" hreflang="x-default" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<meta name="theme-color" content="#F3F0EB">
+<link rel="icon" type="image/png" href="../../minesweeper-speed-icon.png">
+<link rel="apple-touch-icon" href="../../minesweeper-speed-icon.png">
+<link rel="manifest" href="../manifest.json">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="스피드 지뢰찾기">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:url" content="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<meta property="og:title" content="지뢰찾기 온라인｜무료・설치 없이 바로 플레이">
+<meta property="og:description" content="브라우저로 즐기는 클래식 지뢰찾기. 초급·중급·고급, 안전한 첫 클릭, 추측 없는 논리 모드. 최고 기록에 도전하세요!">
+<meta property="og:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="지뢰찾기 온라인｜무료・설치 없이 바로 플레이">
+<meta name="twitter:description" content="브라우저로 즐기는 클래식 지뢰찾기. 초급·중급·고급, 안전한 첫 클릭, 추측 없는 논리 모드. 최고 기록에 도전하세요!">
+<meta name="twitter:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+
+<script>
+  // 語系：使用者選過就照選的；第一次來依瀏覽器語言自動選。搜尋引擎爬蟲不轉址。
+  (function () {
+    var LANGS = {"zh-TW":"../","zh-CN":"../zh-cn/","en":"../en/","ja":"../ja/","ko":"../ko/","es":"../es/","fr":"../fr/","pt":"../pt/","ru":"../ru/","ar":"../ar/"};
+    var CUR = 'ko';
+    if (/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit/i.test(navigator.userAgent)) return;
+    function detect() {
+      var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < list.length; i++) {
+        var t = String(list[i]).toLowerCase();
+        if (t.indexOf('zh') === 0) return /hans|-cn|-sg|-my/.test(t) && t.indexOf('hant') < 0 ? 'zh-CN' : 'zh-TW';
+        var b = t.split('-')[0];
+        if (LANGS[b]) return b;
+      }
+      return 'en';
+    }
+    var want = null;
+    try { want = JSON.parse(localStorage.getItem('ms_lang')); } catch (e) {}
+    if (!want || !LANGS[want]) {
+      want = detect();
+      try { localStorage.setItem('ms_lang', JSON.stringify(want)); } catch (e) {}
+    }
+    if (want !== CUR) location.replace(LANGS[want] + location.hash);
+  })();
+  // 先套用主題，避免畫面閃一下
+  (function () {
+    var d = document.documentElement;
+    try {
+      var t = JSON.parse(localStorage.getItem('ms_theme'));
+      var k = JSON.parse(localStorage.getItem('ms_dark'));
+      d.dataset.theme = t || 'clean';
+      d.dataset.dark = (k == null ? matchMedia('(prefers-color-scheme: dark)').matches : k) ? '1' : '0';
+    } catch (e) {
+      d.dataset.theme = 'clean';
+      d.dataset.dark = '0';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+<style>body { font-family: -apple-system, "Segoe UI", "Noto Sans KR", "Malgun Gothic", sans-serif; }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "VideoGame",
+        "WebApplication"
+      ],
+      "@id": "https://yusakuron4-hub.github.io/minesweeper/ko/#game",
+      "name": "지뢰찾기 온라인 - 스피드 지뢰찾기",
+      "alternateName": [
+        "지뢰찾기",
+        "Minesweeper"
+      ],
+      "url": "https://yusakuron4-hub.github.io/minesweeper/ko/",
+      "description": "무료 온라인 지뢰찾기. 다운로드·가입 없이 바로 플레이하세요. 초급·중급·고급, 첫 클릭은 항상 안전, 추측 없는 모드까지. 규칙, 팁, 자주 묻는 질문 포함.",
+      "genre": [
+        "Puzzle",
+        "Logic"
+      ],
+      "gamePlatform": [
+        "Web browser",
+        "Android"
+      ],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "playMode": "SinglePlayer",
+      "inLanguage": "ko",
+      "isAccessibleForFree": true,
+      "image": "https://yusakuron4-hub.github.io/minesweeper-speed-feature.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "yusakuron",
+        "url": "https://yusakuron4-hub.github.io/"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "yusakuron 게임",
+          "item": "https://yusakuron4-hub.github.io/ko/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "지뢰찾기 온라인",
+          "item": "https://yusakuron4-hub.github.io/minesweeper/ko/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "다운로드가 필요한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아니요. PC와 모바일 브라우저에서 바로 플레이할 수 있고 설치나 가입도 필요 없습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "숫자는 무슨 뜻인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "그 칸 주변 8칸에 있는 지뢰 개수입니다. 1이면 주변에 딱 1개, 빈칸이면 0개이며 주변이 자동으로 열립니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "첫 클릭에 지뢰를 밟을 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아니요. 처음 누른 칸과 주변 8칸에는 지뢰가 없습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "추측 없음 모드란?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "모든 보드를 논리만으로 풀 수 있어서 운에 맡기는 50:50 상황이 나오지 않습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "휴대폰에서 깃발은 어떻게 꽂나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "칸을 길게 누르거나, 보드 아래에서 「깃발」 모드로 바꾼 뒤 탭하세요. PC에서는 오른쪽 클릭입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "최고 기록이 저장되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 이 기기의 브라우저에 저장됩니다. 인터넷 사용 기록을 지우면 사라집니다. 전 세계와 겨루려면 앱의 글로벌 순위를 이용하세요."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Windows 기본 지뢰찾기와 같은가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 규칙과 초급·중급·고급 보드 크기가 같고, 첫 클릭은 항상 안전합니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../ko/">
+      <img src="../../minesweeper-speed-icon.png" alt="" width="32" height="32">
+      <span class="brand-name">스피드 지뢰찾기</span>
+    </a>
+    <label class="lang-select">
+      <span aria-hidden="true">🌐</span>
+      <select id="lang" aria-label="언어">
+        <option value="zh-TW" data-href="../">繁體中文</option>
+        <option value="zh-CN" data-href="../zh-cn/">简体中文</option>
+        <option value="en" data-href="../en/">English</option>
+        <option value="ja" data-href="../ja/">日本語</option>
+        <option value="ko" data-href="../ko/" selected>한국어</option>
+        <option value="es" data-href="../es/">Español</option>
+        <option value="fr" data-href="../fr/">Français</option>
+        <option value="pt" data-href="../pt/">Português</option>
+        <option value="ru" data-href="../ru/">Русский</option>
+        <option value="ar" data-href="../ar/">العربية</option>
+      </select>
+    </label>
+    <a class="get-app" data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ko&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">앱 받기</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>지뢰찾기 온라인</h1>
+      <p>무료・설치 없이 바로 플레이. 첫 클릭은 항상 안전하고, 추측 없는 모드도 있어요.</p>
+    </section>
+
+    <section id="game" aria-label="지뢰찾기 게임" data-status="ready">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="난이도">
+          <button type="button" data-level="beginner">초급</button>
+          <button type="button" data-level="intermediate">중급</button>
+          <button type="button" data-level="expert">고급</button>
+        </div>
+        <label class="toggle" title="모든 보드를 논리만으로 풀 수 있어요">
+          <input type="checkbox" id="noguess"> 추측 없음
+        </label>
+        <span class="spacer"></span>
+        <button type="button" class="chip-btn" id="theme-btn">테마: 클린</button>
+        <button type="button" class="chip-btn" id="dark-btn">🌙 다크</button>
+      </div>
+
+      <div class="hud">
+        <div class="counter" aria-label="남은 지뢰">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pole" d="M7 3.5v17" /><path class="cloth" d="M8 4l10 4.2L8 12.4z" /><path class="pole" d="M4.5 20.5h6" /></svg>
+          <span id="mine-counter">10</span>
+        </div>
+        <button type="button" id="reset" aria-label="새 게임"></button>
+        <div class="counter time" aria-label="시간"><span id="timer">00:00.00</span></div>
+      </div>
+
+      <div id="board-wrap">
+        <div id="board" role="grid" aria-label="지뢰찾기 보드"></div>
+      </div>
+
+      <div class="below">
+        <div class="seg" role="group" aria-label="터치 모드">
+          <button type="button" data-mode="dig">⛏️ 열기</button>
+          <button type="button" data-mode="flag">🚩 깃발</button>
+        </div>
+        <span class="spacer"></span>
+        <span id="best">기록 없음</span>
+      </div>
+      <p class="hint">PC: 왼쪽 클릭으로 열기, 오른쪽 클릭으로 깃발, 숫자 클릭으로 주변 한 번에 열기. 모바일: 탭으로 열기, 길게 눌러 깃발. N 키로 새 게임.</p>
+    </section>
+
+    <aside class="app-banner" aria-label="앱 받기">
+      <img src="../../minesweeper-speed-icon.png" alt="스피드 지뢰찾기 앱 아이콘" width="64" height="64" loading="lazy">
+      <div>
+        <h2>더 많은 도전? 스피드 지뢰찾기 앱</h2>
+        <p>100스테이지 모험 모드・데일리 레이스・Google Play 게임즈 글로벌 순위와 업적 25개・리플레이</p>
+      </div>
+      <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ko&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">무료 다운로드</a>
+    </aside>
+
+    <article>
+      <h2>지뢰찾기 규칙</h2>
+      <ol>
+        <li><strong>목표</strong>: <strong>지뢰가 아닌</strong> 칸을 모두 열면 클리어. 지뢰를 열면 게임 오버입니다.</li>
+        <li><strong>숫자</strong>: 열린 칸의 숫자는 <strong>주변 8칸</strong>(대각선 포함)에 있는 지뢰 개수입니다.</li>
+        <li><strong>빈칸</strong>: 주변에 지뢰가 없는 칸은 비어 있고, 주변이 자동으로 한꺼번에 열립니다.</li>
+        <li><strong>깃발</strong>: 지뢰가 확실한 칸에 깃발을 꽂아 실수로 여는 것을 막으세요. 왼쪽 위 숫자는 「전체 지뢰 − 깃발 수」입니다.</li>
+        <li><strong>한 번에 열기</strong>: 숫자 주변에 그 숫자만큼 깃발이 있으면 숫자를 눌러 나머지 주변 칸을 한 번에 엽니다. 깃발이 틀리면 지뢰가 터지니 조심!</li>
+      </ol>
+
+      <h2>조작 방법</h2>
+      <table>
+        <thead><tr><th>동작</th><th>PC</th><th>모바일</th></tr></thead>
+        <tbody>
+          <tr><td>칸 열기</td><td>왼쪽 클릭</td><td>탭</td></tr>
+          <tr><td>깃발 꽂기/빼기</td><td>오른쪽 클릭</td><td>길게 누르기, 또는 「깃발」 모드에서 탭</td></tr>
+          <tr><td>주변 한 번에 열기</td><td>열린 숫자 클릭 (아무 버튼)</td><td>열린 숫자 탭</td></tr>
+          <tr><td>새 게임</td><td>스마일 버튼, 또는 N / F2</td><td>스마일 버튼</td></tr>
+        </tbody>
+      </table>
+
+      <h2>난이도</h2>
+      <table>
+        <thead><tr><th>난이도</th><th>보드 크기</th><th>지뢰</th><th>밀도</th></tr></thead>
+        <tbody>
+          <tr><td>초급</td><td>9 × 9</td><td>10</td><td>약 12%</td></tr>
+          <tr><td>중급</td><td>16 × 16</td><td>40</td><td>약 16%</td></tr>
+          <tr><td>고급</td><td>16 × 30 (휴대폰 세로 화면은 30 × 16)</td><td>99</td><td>약 21%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>초보자를 위한 팁</h2>
+      <h3>1. 이미 채워진 숫자 찾기</h3>
+      <p>숫자 주변에 그 숫자만큼 깃발이 있으면 나머지 닫힌 칸은 모두 안전합니다. 열거나 숫자를 눌러 한 번에 여세요.</p>
+
+      <h3>2. 닫힌 칸 수 = 숫자라면 전부 지뢰</h3>
+      <p>「3」 주변에 닫힌 칸이 딱 3개라면 셋 다 지뢰입니다. 깃발을 꽂으세요.</p>
+
+      <h3>3. 벽 쪽의 1-2-1</h3>
+      <p>닫힌 칸 줄을 따라 1-2-1이 있으면 <strong>1 맞은편은 지뢰, 2 맞은편은 안전</strong>합니다.</p>
+      <div class="pattern-grid" aria-label="1-2-1">
+        <div class="pattern"><span class="m">💣</span><span class="s">✓</span><span class="m">💣</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>4. 벽 쪽의 1-2-2-1</h3>
+      <p>1-2-2-1이면 <strong>가운데 두 2의 맞은편이 지뢰, 양 끝 1의 맞은편은 안전</strong>합니다.</p>
+      <div class="pattern-grid" aria-label="1-2-2-1">
+        <div class="pattern"><span class="s">✓</span><span class="m">💣</span><span class="m">💣</span><span class="s">✓</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>5. 빨라지려면: 깃발은 최소로, 한 번에 열기는 최대로</h3>
+      <p>숙련자는 한 번에 열기에 필요한 곳에만 깃발을 꽂고 숫자를 눌러 넓은 영역을 엽니다. 클릭 수가 크게 줄어요.</p>
+      <p class="legend">💣 = 지뢰, ✓ = 안전. 보드 가장자리나 열린 영역 옆에서 자주 나와요.</p>
+
+      <h2>추측 없는(순수 논리) 모드란?</h2>
+      <p>일반 지뢰찾기에서는 「두 칸 중 하나가 지뢰인데 구별할 수 없는」 50:50 상황이 생기기도 합니다. <strong>추측 없음</strong>을 켜면 첫 클릭 후에 보드를 만들고 솔버로 검사하므로 <strong>항상 논리만으로 풀 수 있습니다</strong>. 승패는 오직 추리력과 속도에 달려 있어요.</p>
+
+      <h2>자주 묻는 질문</h2>
+      <h3>다운로드가 필요한가요?</h3>
+      <p>아니요. PC와 모바일 브라우저에서 바로 플레이할 수 있고 설치나 가입도 필요 없습니다.</p>
+      <h3>숫자는 무슨 뜻인가요?</h3>
+      <p>그 칸 주변 8칸에 있는 지뢰 개수입니다. 1이면 주변에 딱 1개, 빈칸이면 0개이며 주변이 자동으로 열립니다.</p>
+      <h3>첫 클릭에 지뢰를 밟을 수 있나요?</h3>
+      <p>아니요. 처음 누른 칸과 주변 8칸에는 지뢰가 없습니다.</p>
+      <h3>추측 없음 모드란?</h3>
+      <p>모든 보드를 논리만으로 풀 수 있어서 운에 맡기는 50:50 상황이 나오지 않습니다.</p>
+      <h3>휴대폰에서 깃발은 어떻게 꽂나요?</h3>
+      <p>칸을 길게 누르거나, 보드 아래에서 「깃발」 모드로 바꾼 뒤 탭하세요. PC에서는 오른쪽 클릭입니다.</p>
+      <h3>최고 기록이 저장되나요?</h3>
+      <p>네, 이 기기의 브라우저에 저장됩니다. 인터넷 사용 기록을 지우면 사라집니다. 전 세계와 겨루려면 앱의 글로벌 순위를 이용하세요.</p>
+      <h3>Windows 기본 지뢰찾기와 같은가요?</h3>
+      <p>네. 규칙과 초급·중급·고급 보드 크기가 같고, 첫 클릭은 항상 안전합니다.</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="langs" aria-label="다른 언어">
+      <a href="../" hreflang="zh-TW" lang="zh-Hant-TW" data-lang="zh-TW">繁體中文</a>
+      <a href="../zh-cn/" hreflang="zh-CN" lang="zh-Hans-CN" data-lang="zh-CN">简体中文</a>
+      <a href="../en/" hreflang="en" lang="en" data-lang="en">English</a>
+      <a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a>
+      <a href="../ko/" hreflang="ko" lang="ko" aria-current="page" data-lang="ko">한국어</a>
+      <a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a>
+      <a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      <a href="../pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a>
+      <a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+      <a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a>
+    </nav>
+    <p><a href="../../ko/">yusakuron 게임</a>・<a href="../../minesweeper-speed-privacy-policy/">개인정보처리방침</a>・<a href="mailto:yusakuron4@gmail.com">문의하기</a></p>
+    <p>© 2026 yusakuron</p>
+  </footer>
+
+  <div id="result" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <button type="button" id="result-close" aria-label="닫기">×</button>
+      <h2 id="result-title">🎉 클리어!</h2>
+      <p id="result-time-label">클리어 시간</p>
+      <p id="result-time">00:00.00</p>
+      <span class="record" id="result-record" hidden>🏆 신기록!</span>
+      <p id="result-best"></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="result-view">보드 보기</button>
+        <button type="button" class="btn primary" id="result-again">다시 하기</button>
+      </div>
+      <div class="cta">
+        <img src="../../minesweeper-speed-icon.png" alt="" width="48" height="48">
+        <div>
+          <p id="result-cta-text"></p>
+          <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ko&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">무료 앱 받기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>window.MS_I18N = {"levels":{"beginner":"초급","intermediate":"중급","expert":"고급"},"boardAria":"{level} 지뢰찾기 보드, {rows}행 × {cols}열, 지뢰 {mines}개","best":"최고 {t}","noRecord":"기록 없음","themeClean":"테마: 클린","themeRetro":"테마: 클래식 레트로","dark":"🌙 다크","light":"☀️ 라이트","win":"🎉 클리어!","lose":"💥 지뢰를 밟았어요","bestRecord":"{level} 최고 기록 {t}","ctaWin":"{s}초 만에 클리어! 앱에서 전 세계와 속도 대결하세요.","ctaLose":"앱에서 100스테이지 모험, 데일리 레이스, 글로벌 순위를 즐겨 보세요."};</script>
+  <script src="../game.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Сапёр онлайн бесплатно – без скачивания | Minesweeper Speed</title>
+<meta name="description" content="Играйте в классического Сапёра онлайн бесплатно, без скачивания и регистрации. Уровни «Новичок», «Любитель» и «Профессионал», безопасный первый ход и режим без угадывания. Правила, советы и FAQ.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<link rel="alternate" hreflang="zh-TW" href="https://yusakuron4-hub.github.io/minesweeper/">
+<link rel="alternate" hreflang="zh-CN" href="https://yusakuron4-hub.github.io/minesweeper/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<link rel="alternate" hreflang="ja" href="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<link rel="alternate" hreflang="ko" href="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<link rel="alternate" hreflang="es" href="https://yusakuron4-hub.github.io/minesweeper/es/">
+<link rel="alternate" hreflang="fr" href="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<link rel="alternate" hreflang="pt" href="https://yusakuron4-hub.github.io/minesweeper/pt/">
+<link rel="alternate" hreflang="ru" href="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<link rel="alternate" hreflang="ar" href="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<link rel="alternate" hreflang="x-default" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<meta name="theme-color" content="#F3F0EB">
+<link rel="icon" type="image/png" href="../../minesweeper-speed-icon.png">
+<link rel="apple-touch-icon" href="../../minesweeper-speed-icon.png">
+<link rel="manifest" href="../manifest.json">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Minesweeper Speed">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:url" content="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<meta property="og:title" content="Сапёр онлайн бесплатно – без скачивания">
+<meta property="og:description" content="Классический Сапёр в браузере: три уровня сложности, безопасный первый ход и режим без угадывания. Побейте свой рекорд!">
+<meta property="og:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Сапёр онлайн бесплатно – без скачивания">
+<meta name="twitter:description" content="Классический Сапёр в браузере: три уровня сложности, безопасный первый ход и режим без угадывания. Побейте свой рекорд!">
+<meta name="twitter:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+
+<script>
+  // 語系：使用者選過就照選的；第一次來依瀏覽器語言自動選。搜尋引擎爬蟲不轉址。
+  (function () {
+    var LANGS = {"zh-TW":"../","zh-CN":"../zh-cn/","en":"../en/","ja":"../ja/","ko":"../ko/","es":"../es/","fr":"../fr/","pt":"../pt/","ru":"../ru/","ar":"../ar/"};
+    var CUR = 'ru';
+    if (/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit/i.test(navigator.userAgent)) return;
+    function detect() {
+      var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < list.length; i++) {
+        var t = String(list[i]).toLowerCase();
+        if (t.indexOf('zh') === 0) return /hans|-cn|-sg|-my/.test(t) && t.indexOf('hant') < 0 ? 'zh-CN' : 'zh-TW';
+        var b = t.split('-')[0];
+        if (LANGS[b]) return b;
+      }
+      return 'en';
+    }
+    var want = null;
+    try { want = JSON.parse(localStorage.getItem('ms_lang')); } catch (e) {}
+    if (!want || !LANGS[want]) {
+      want = detect();
+      try { localStorage.setItem('ms_lang', JSON.stringify(want)); } catch (e) {}
+    }
+    if (want !== CUR) location.replace(LANGS[want] + location.hash);
+  })();
+  // 先套用主題，避免畫面閃一下
+  (function () {
+    var d = document.documentElement;
+    try {
+      var t = JSON.parse(localStorage.getItem('ms_theme'));
+      var k = JSON.parse(localStorage.getItem('ms_dark'));
+      d.dataset.theme = t || 'clean';
+      d.dataset.dark = (k == null ? matchMedia('(prefers-color-scheme: dark)').matches : k) ? '1' : '0';
+    } catch (e) {
+      d.dataset.theme = 'clean';
+      d.dataset.dark = '0';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "VideoGame",
+        "WebApplication"
+      ],
+      "@id": "https://yusakuron4-hub.github.io/minesweeper/ru/#game",
+      "name": "Сапёр онлайн - Minesweeper Speed",
+      "alternateName": [
+        "Сапёр",
+        "Minesweeper"
+      ],
+      "url": "https://yusakuron4-hub.github.io/minesweeper/ru/",
+      "description": "Играйте в классического Сапёра онлайн бесплатно, без скачивания и регистрации. Уровни «Новичок», «Любитель» и «Профессионал», безопасный первый ход и режим без угадывания. Правила, советы и FAQ.",
+      "genre": [
+        "Puzzle",
+        "Logic"
+      ],
+      "gamePlatform": [
+        "Web browser",
+        "Android"
+      ],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "playMode": "SinglePlayer",
+      "inLanguage": "ru",
+      "isAccessibleForFree": true,
+      "image": "https://yusakuron4-hub.github.io/minesweeper-speed-feature.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "yusakuron",
+        "url": "https://yusakuron4-hub.github.io/"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Игры yusakuron",
+          "item": "https://yusakuron4-hub.github.io/ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Сапёр онлайн",
+          "item": "https://yusakuron4-hub.github.io/minesweeper/ru/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Нужно что-то скачивать?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Сапёр работает прямо в браузере на компьютере и телефоне, без установки и регистрации."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что означают цифры?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Сколько мин в 8 клетках вокруг. 1 — ровно одна мина рядом; пустая клетка — мин нет, и область открывается сама."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли попасть на мину первым ходом?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. В первой открытой клетке и 8 соседних никогда нет мин."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что такое режим без угадывания?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Любое поле решается одной логикой, поэтому вам никогда не придётся гадать 50/50."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как поставить флажок на телефоне?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Удерживайте клетку или переключите режим под полем на «Флажок» и нажмите. На компьютере — правый клик."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сохраняются ли мои рекорды?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, в браузере на этом устройстве. Они удалятся, если очистить данные браузера. Чтобы соревноваться со всем миром, используйте рейтинги в приложении."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Это тот же Сапёр, что в Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да: те же правила и те же размеры полей для трёх уровней, плюс всегда безопасный первый ход."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../ru/">
+      <img src="../../minesweeper-speed-icon.png" alt="" width="32" height="32">
+      <span class="brand-name">Minesweeper Speed</span>
+    </a>
+    <label class="lang-select">
+      <span aria-hidden="true">🌐</span>
+      <select id="lang" aria-label="Язык">
+        <option value="zh-TW" data-href="../">繁體中文</option>
+        <option value="zh-CN" data-href="../zh-cn/">简体中文</option>
+        <option value="en" data-href="../en/">English</option>
+        <option value="ja" data-href="../ja/">日本語</option>
+        <option value="ko" data-href="../ko/">한국어</option>
+        <option value="es" data-href="../es/">Español</option>
+        <option value="fr" data-href="../fr/">Français</option>
+        <option value="pt" data-href="../pt/">Português</option>
+        <option value="ru" data-href="../ru/" selected>Русский</option>
+        <option value="ar" data-href="../ar/">العربية</option>
+      </select>
+    </label>
+    <a class="get-app" data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ru&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Скачать</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Сапёр онлайн</h1>
+      <p>Бесплатно, без скачивания, сразу в браузере. Первый ход всегда безопасен, есть режим без угадывания.</p>
+    </section>
+
+    <section id="game" aria-label="Игра Сапёр" data-status="ready">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Сложность">
+          <button type="button" data-level="beginner">Новичок</button>
+          <button type="button" data-level="intermediate">Любитель</button>
+          <button type="button" data-level="expert">Профессионал</button>
+        </div>
+        <label class="toggle" title="Любое поле решается одной логикой">
+          <input type="checkbox" id="noguess"> Без угадывания
+        </label>
+        <span class="spacer"></span>
+        <button type="button" class="chip-btn" id="theme-btn">Тема: Современная</button>
+        <button type="button" class="chip-btn" id="dark-btn">🌙 Тёмная</button>
+      </div>
+
+      <div class="hud">
+        <div class="counter" aria-label="Осталось мин">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pole" d="M7 3.5v17" /><path class="cloth" d="M8 4l10 4.2L8 12.4z" /><path class="pole" d="M4.5 20.5h6" /></svg>
+          <span id="mine-counter">10</span>
+        </div>
+        <button type="button" id="reset" aria-label="Новая игра"></button>
+        <div class="counter time" aria-label="Время"><span id="timer">00:00.00</span></div>
+      </div>
+
+      <div id="board-wrap">
+        <div id="board" role="grid" aria-label="Поле Сапёра"></div>
+      </div>
+
+      <div class="below">
+        <div class="seg" role="group" aria-label="Режим нажатия">
+          <button type="button" data-mode="dig">⛏️ Открыть</button>
+          <button type="button" data-mode="flag">🚩 Флажок</button>
+        </div>
+        <span class="spacer"></span>
+        <span id="best">Рекордов нет</span>
+      </div>
+      <p class="hint">Компьютер: левый клик — открыть, правый — флажок, клик по цифре — открыть соседей. Телефон: нажатие — открыть, долгое нажатие — флажок. Клавиша N — новая игра.</p>
+    </section>
+
+    <aside class="app-banner" aria-label="Скачать">
+      <img src="../../minesweeper-speed-icon.png" alt="Значок приложения Minesweeper Speed" width="64" height="64" loading="lazy">
+      <div>
+        <h2>Хотите больше? Установите приложение Minesweeper Speed</h2>
+        <p>Приключение из 100 уровней · Ежедневная гонка · Рейтинги Google Play Игр и 25 достижений · Повторы</p>
+      </div>
+      <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ru&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Скачать бесплатно</a>
+    </aside>
+
+    <article>
+      <h2>Правила игры Сапёр</h2>
+      <ol>
+        <li><strong>Цель</strong>: открыть все клетки, где <strong>нет мин</strong>. Откроете мину — проиграете.</li>
+        <li><strong>Цифры</strong> показывают, сколько мин среди <strong>8 соседних клеток</strong> (включая диагонали).</li>
+        <li><strong>Пустые клетки</strong> не граничат с минами и автоматически открывают область вокруг.</li>
+        <li><strong>Флажки</strong>: отмечайте клетки, где точно есть мина, чтобы случайно их не открыть. Счётчик показывает мины минус флажки.</li>
+        <li><strong>Быстрое открытие</strong>: если вокруг цифры уже стоит столько же флажков, нажмите на неё, чтобы открыть остальных соседей сразу. Неверный флажок — и мина взорвётся!</li>
+      </ol>
+
+      <h2>Управление</h2>
+      <table>
+        <thead><tr><th>Действие</th><th>Компьютер</th><th>Телефон</th></tr></thead>
+        <tbody>
+          <tr><td>Открыть клетку</td><td>Левый клик</td><td>Нажатие</td></tr>
+          <tr><td>Поставить / снять флажок</td><td>Правый клик</td><td>Долгое нажатие или режим «Флажок»</td></tr>
+          <tr><td>Быстрое открытие</td><td>Клик по открытой цифре (любая кнопка)</td><td>Нажатие на открытую цифру</td></tr>
+          <tr><td>Новая игра</td><td>Кнопка-смайлик или N / F2</td><td>Кнопка-смайлик</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Уровни сложности</h2>
+      <table>
+        <thead><tr><th>Уровень</th><th>Поле</th><th>Мины</th><th>Плотность</th></tr></thead>
+        <tbody>
+          <tr><td>Новичок</td><td>9 × 9</td><td>10</td><td>≈ 12%</td></tr>
+          <tr><td>Любитель</td><td>16 × 16</td><td>40</td><td>≈ 16%</td></tr>
+          <tr><td>Профессионал</td><td>16 × 30 (30 × 16 на телефоне вертикально)</td><td>99</td><td>≈ 21%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Советы для начинающих</h2>
+      <h3>1. Ищите «закрытые» цифры</h3>
+      <p>Если вокруг цифры уже столько флажков, сколько она показывает, остальные закрытые соседи безопасны. Откройте их или используйте быстрое открытие.</p>
+
+      <h3>2. Закрытых клеток = цифре? Все — мины</h3>
+      <p>Если у «3» осталось ровно три закрытых соседа, все три — мины. Ставьте флажки.</p>
+
+      <h3>3. Шаблон 1-2-1</h3>
+      <p>Ряд 1-2-1 вдоль закрытых клеток: <strong>напротив единиц — мины, напротив двойки — безопасно</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-1">
+        <div class="pattern"><span class="m">💣</span><span class="s">✓</span><span class="m">💣</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>4. Шаблон 1-2-2-1</h3>
+      <p>Для 1-2-2-1: <strong>напротив двух двоек — мины, напротив единиц — безопасно</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-2-1">
+        <div class="pattern"><span class="s">✓</span><span class="m">💣</span><span class="m">💣</span><span class="s">✓</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>5. Чтобы играть быстрее: меньше флажков, больше быстрых открытий</h3>
+      <p>Быстрые игроки ставят только нужные для быстрого открытия флажки и открывают большие области кликами по цифрам.</p>
+      <p class="legend">💣 = мина, ✓ = безопасно. Такие шаблоны чаще всего встречаются у краёв и рядом с открытыми областями.</p>
+
+      <h2>Что такое Сапёр без угадывания?</h2>
+      <p>В классическом Сапёре иногда остаётся 50/50: одна из двух клеток — мина, и понять какая, невозможно. В режиме <strong>«Без угадывания»</strong> поле создаётся после первого хода и проверяется решателем, поэтому его <strong>всегда можно решить одной логикой</strong>.</p>
+
+      <h2>Частые вопросы о Сапёре</h2>
+      <h3>Нужно что-то скачивать?</h3>
+      <p>Нет. Сапёр работает прямо в браузере на компьютере и телефоне, без установки и регистрации.</p>
+      <h3>Что означают цифры?</h3>
+      <p>Сколько мин в 8 клетках вокруг. 1 — ровно одна мина рядом; пустая клетка — мин нет, и область открывается сама.</p>
+      <h3>Можно ли попасть на мину первым ходом?</h3>
+      <p>Нет. В первой открытой клетке и 8 соседних никогда нет мин.</p>
+      <h3>Что такое режим без угадывания?</h3>
+      <p>Любое поле решается одной логикой, поэтому вам никогда не придётся гадать 50/50.</p>
+      <h3>Как поставить флажок на телефоне?</h3>
+      <p>Удерживайте клетку или переключите режим под полем на «Флажок» и нажмите. На компьютере — правый клик.</p>
+      <h3>Сохраняются ли мои рекорды?</h3>
+      <p>Да, в браузере на этом устройстве. Они удалятся, если очистить данные браузера. Чтобы соревноваться со всем миром, используйте рейтинги в приложении.</p>
+      <h3>Это тот же Сапёр, что в Windows?</h3>
+      <p>Да: те же правила и те же размеры полей для трёх уровней, плюс всегда безопасный первый ход.</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="langs" aria-label="Другие языки">
+      <a href="../" hreflang="zh-TW" lang="zh-Hant-TW" data-lang="zh-TW">繁體中文</a>
+      <a href="../zh-cn/" hreflang="zh-CN" lang="zh-Hans-CN" data-lang="zh-CN">简体中文</a>
+      <a href="../en/" hreflang="en" lang="en" data-lang="en">English</a>
+      <a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a>
+      <a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a>
+      <a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a>
+      <a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      <a href="../pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a>
+      <a href="../ru/" hreflang="ru" lang="ru" aria-current="page" data-lang="ru">Русский</a>
+      <a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a>
+    </nav>
+    <p><a href="../../ru/">Игры yusakuron</a>・<a href="../../minesweeper-speed-privacy-policy/">Политика конфиденциальности</a>・<a href="mailto:yusakuron4@gmail.com">Связаться</a></p>
+    <p>© 2026 yusakuron</p>
+  </footer>
+
+  <div id="result" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <button type="button" id="result-close" aria-label="Закрыть">×</button>
+      <h2 id="result-title">🎉 Победа!</h2>
+      <p id="result-time-label">Ваше время</p>
+      <p id="result-time">00:00.00</p>
+      <span class="record" id="result-record" hidden>🏆 Новый рекорд!</span>
+      <p id="result-best"></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="result-view">Посмотреть поле</button>
+        <button type="button" class="btn primary" id="result-again">Ещё раз</button>
+      </div>
+      <div class="cta">
+        <img src="../../minesweeper-speed-icon.png" alt="" width="48" height="48">
+        <div>
+          <p id="result-cta-text"></p>
+          <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ru&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Скачать приложение</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>window.MS_I18N = {"levels":{"beginner":"Новичок","intermediate":"Любитель","expert":"Профессионал"},"boardAria":"Поле Сапёра, уровень «{level}»: {rows} × {cols}, мин: {mines}","best":"Рекорд {t}","noRecord":"Рекордов нет","themeClean":"Тема: Современная","themeRetro":"Тема: Классическое ретро","dark":"🌙 Тёмная","light":"☀️ Светлая","win":"🎉 Победа!","lose":"💥 Вы подорвались на мине","bestRecord":"Рекорд («{level}»): {t}","ctaWin":"Готово за {s} с! Установите приложение и соревнуйтесь со всем миром.","ctaLose":"В приложении: 100 уровней приключения, ежедневная гонка и мировые рейтинги."};</script>
+  <script src="../game.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Démineur en ligne gratuit – Sans téléchargement | Minesweeper Speed</title>
+<meta name="description" content="Jouez au Démineur classique en ligne gratuitement, sans téléchargement ni inscription. Niveaux Débutant, Intermédiaire et Expert, premier clic sûr et mode sans hasard. Règles, astuces et FAQ.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<link rel="alternate" hreflang="zh-TW" href="https://yusakuron4-hub.github.io/minesweeper/">
+<link rel="alternate" hreflang="zh-CN" href="https://yusakuron4-hub.github.io/minesweeper/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<link rel="alternate" hreflang="ja" href="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<link rel="alternate" hreflang="ko" href="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<link rel="alternate" hreflang="es" href="https://yusakuron4-hub.github.io/minesweeper/es/">
+<link rel="alternate" hreflang="fr" href="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<link rel="alternate" hreflang="pt" href="https://yusakuron4-hub.github.io/minesweeper/pt/">
+<link rel="alternate" hreflang="ru" href="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<link rel="alternate" hreflang="ar" href="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<link rel="alternate" hreflang="x-default" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<meta name="theme-color" content="#F3F0EB">
+<link rel="icon" type="image/png" href="../../minesweeper-speed-icon.png">
+<link rel="apple-touch-icon" href="../../minesweeper-speed-icon.png">
+<link rel="manifest" href="../manifest.json">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Minesweeper Speed">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:url" content="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<meta property="og:title" content="Démineur en ligne gratuit – Sans téléchargement">
+<meta property="og:description" content="Le Démineur classique dans votre navigateur : Débutant, Intermédiaire et Expert, premier clic sûr, mode 100 % logique. Battez votre record !">
+<meta property="og:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Démineur en ligne gratuit – Sans téléchargement">
+<meta name="twitter:description" content="Le Démineur classique dans votre navigateur : Débutant, Intermédiaire et Expert, premier clic sûr, mode 100 % logique. Battez votre record !">
+<meta name="twitter:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+
+<script>
+  // 語系：使用者選過就照選的；第一次來依瀏覽器語言自動選。搜尋引擎爬蟲不轉址。
+  (function () {
+    var LANGS = {"zh-TW":"../","zh-CN":"../zh-cn/","en":"../en/","ja":"../ja/","ko":"../ko/","es":"../es/","fr":"../fr/","pt":"../pt/","ru":"../ru/","ar":"../ar/"};
+    var CUR = 'fr';
+    if (/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit/i.test(navigator.userAgent)) return;
+    function detect() {
+      var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < list.length; i++) {
+        var t = String(list[i]).toLowerCase();
+        if (t.indexOf('zh') === 0) return /hans|-cn|-sg|-my/.test(t) && t.indexOf('hant') < 0 ? 'zh-CN' : 'zh-TW';
+        var b = t.split('-')[0];
+        if (LANGS[b]) return b;
+      }
+      return 'en';
+    }
+    var want = null;
+    try { want = JSON.parse(localStorage.getItem('ms_lang')); } catch (e) {}
+    if (!want || !LANGS[want]) {
+      want = detect();
+      try { localStorage.setItem('ms_lang', JSON.stringify(want)); } catch (e) {}
+    }
+    if (want !== CUR) location.replace(LANGS[want] + location.hash);
+  })();
+  // 先套用主題，避免畫面閃一下
+  (function () {
+    var d = document.documentElement;
+    try {
+      var t = JSON.parse(localStorage.getItem('ms_theme'));
+      var k = JSON.parse(localStorage.getItem('ms_dark'));
+      d.dataset.theme = t || 'clean';
+      d.dataset.dark = (k == null ? matchMedia('(prefers-color-scheme: dark)').matches : k) ? '1' : '0';
+    } catch (e) {
+      d.dataset.theme = 'clean';
+      d.dataset.dark = '0';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "VideoGame",
+        "WebApplication"
+      ],
+      "@id": "https://yusakuron4-hub.github.io/minesweeper/fr/#game",
+      "name": "Démineur en ligne - Minesweeper Speed",
+      "alternateName": [
+        "Démineur",
+        "Minesweeper"
+      ],
+      "url": "https://yusakuron4-hub.github.io/minesweeper/fr/",
+      "description": "Jouez au Démineur classique en ligne gratuitement, sans téléchargement ni inscription. Niveaux Débutant, Intermédiaire et Expert, premier clic sûr et mode sans hasard. Règles, astuces et FAQ.",
+      "genre": [
+        "Puzzle",
+        "Logic"
+      ],
+      "gamePlatform": [
+        "Web browser",
+        "Android"
+      ],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "playMode": "SinglePlayer",
+      "inLanguage": "fr",
+      "isAccessibleForFree": true,
+      "image": "https://yusakuron4-hub.github.io/minesweeper-speed-feature.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "yusakuron",
+        "url": "https://yusakuron4-hub.github.io/"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Jeux de yusakuron",
+          "item": "https://yusakuron4-hub.github.io/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Démineur en ligne",
+          "item": "https://yusakuron4-hub.github.io/minesweeper/fr/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Faut-il télécharger quelque chose ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Le Démineur se joue directement dans le navigateur, sur ordinateur comme sur mobile, sans installation ni inscription."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que signifient les chiffres ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le nombre de mines dans les 8 cases autour. Un 1 signifie exactement une mine voisine ; une case vide n’en a aucune et ouvre la zone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on tomber sur une mine au premier clic ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. La première case cliquée et ses 8 voisines ne contiennent jamais de mine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu’est-ce que le mode sans hasard ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chaque grille se résout par la logique seule : vous n’aurez jamais à tenter un 50/50."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment poser un drapeau sur mobile ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Faites un appui long sur la case, ou passez en mode « Drapeau » sous la grille puis touchez. Sur ordinateur, clic droit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mes records sont-ils enregistrés ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, dans le navigateur de cet appareil. Ils disparaissent si vous effacez les données de navigation. Pour vous mesurer au monde, utilisez les classements de l’app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce le même jeu que le Démineur classique de Windows ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui : mêmes règles et mêmes tailles Débutant, Intermédiaire et Expert, avec un premier clic toujours sûr."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../fr/">
+      <img src="../../minesweeper-speed-icon.png" alt="" width="32" height="32">
+      <span class="brand-name">Minesweeper Speed</span>
+    </a>
+    <label class="lang-select">
+      <span aria-hidden="true">🌐</span>
+      <select id="lang" aria-label="Langue">
+        <option value="zh-TW" data-href="../">繁體中文</option>
+        <option value="zh-CN" data-href="../zh-cn/">简体中文</option>
+        <option value="en" data-href="../en/">English</option>
+        <option value="ja" data-href="../ja/">日本語</option>
+        <option value="ko" data-href="../ko/">한국어</option>
+        <option value="es" data-href="../es/">Español</option>
+        <option value="fr" data-href="../fr/" selected>Français</option>
+        <option value="pt" data-href="../pt/">Português</option>
+        <option value="ru" data-href="../ru/">Русский</option>
+        <option value="ar" data-href="../ar/">العربية</option>
+      </select>
+    </label>
+    <a class="get-app" data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=fr&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Obtenir l’app</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Démineur en ligne</h1>
+      <p>Gratuit, sans téléchargement, on joue tout de suite. Le premier clic est toujours sûr, avec un mode sans hasard.</p>
+    </section>
+
+    <section id="game" aria-label="Jeu du Démineur" data-status="ready">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Difficulté">
+          <button type="button" data-level="beginner">Débutant</button>
+          <button type="button" data-level="intermediate">Intermédiaire</button>
+          <button type="button" data-level="expert">Expert</button>
+        </div>
+        <label class="toggle" title="Chaque grille se résout par la logique seule">
+          <input type="checkbox" id="noguess"> Sans hasard
+        </label>
+        <span class="spacer"></span>
+        <button type="button" class="chip-btn" id="theme-btn">Thème : Épuré</button>
+        <button type="button" class="chip-btn" id="dark-btn">🌙 Sombre</button>
+      </div>
+
+      <div class="hud">
+        <div class="counter" aria-label="Mines restantes">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pole" d="M7 3.5v17" /><path class="cloth" d="M8 4l10 4.2L8 12.4z" /><path class="pole" d="M4.5 20.5h6" /></svg>
+          <span id="mine-counter">10</span>
+        </div>
+        <button type="button" id="reset" aria-label="Nouvelle partie"></button>
+        <div class="counter time" aria-label="Temps"><span id="timer">00:00.00</span></div>
+      </div>
+
+      <div id="board-wrap">
+        <div id="board" role="grid" aria-label="Grille du Démineur"></div>
+      </div>
+
+      <div class="below">
+        <div class="seg" role="group" aria-label="Mode tactile">
+          <button type="button" data-mode="dig">⛏️ Creuser</button>
+          <button type="button" data-mode="flag">🚩 Drapeau</button>
+        </div>
+        <span class="spacer"></span>
+        <span id="best">Aucun record</span>
+      </div>
+      <p class="hint">Ordinateur : clic gauche pour creuser, clic droit pour un drapeau, clic sur un chiffre pour ouvrir autour. Mobile : touchez pour creuser, appui long pour un drapeau. Touche N : nouvelle partie.</p>
+    </section>
+
+    <aside class="app-banner" aria-label="Obtenir l’app">
+      <img src="../../minesweeper-speed-icon.png" alt="Icône de l’app Minesweeper Speed" width="64" height="64" loading="lazy">
+      <div>
+        <h2>Envie de plus ? Téléchargez l’app Minesweeper Speed</h2>
+        <p>Aventure de 100 niveaux · Course du jour · Classements Google Play Jeux et 25 succès · Rediffusions</p>
+      </div>
+      <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=fr&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Télécharger gratuitement</a>
+    </aside>
+
+    <article>
+      <h2>Comment jouer au Démineur</h2>
+      <ol>
+        <li><strong>But</strong> : ouvrir toutes les cases qui <strong>ne sont pas des mines</strong>. Si vous ouvrez une mine, c’est perdu.</li>
+        <li><strong>Chiffres</strong> : ils indiquent combien de mines touchent la case parmi ses <strong>8 voisines</strong> (diagonales comprises).</li>
+        <li><strong>Cases vides</strong> : aucune mine autour ; la zone voisine s’ouvre automatiquement.</li>
+        <li><strong>Drapeaux</strong> : marquez les cases dont vous êtes sûr qu’elles sont minées pour éviter de cliquer dessus. Le compteur affiche mines moins drapeaux.</li>
+        <li><strong>Ouverture rapide</strong> : quand un chiffre a déjà autant de drapeaux autour de lui, cliquez dessus pour ouvrir toutes ses autres voisines. Un drapeau mal placé fait exploser une mine !</li>
+      </ol>
+
+      <h2>Commandes</h2>
+      <table>
+        <thead><tr><th>Action</th><th>Ordinateur</th><th>Mobile</th></tr></thead>
+        <tbody>
+          <tr><td>Ouvrir une case</td><td>Clic gauche</td><td>Toucher</td></tr>
+          <tr><td>Poser / retirer un drapeau</td><td>Clic droit</td><td>Appui long, ou mode Drapeau puis toucher</td></tr>
+          <tr><td>Ouverture rapide</td><td>Cliquer sur un chiffre ouvert (n’importe quel bouton)</td><td>Toucher un chiffre ouvert</td></tr>
+          <tr><td>Nouvelle partie</td><td>Bouton smiley, ou N / F2</td><td>Bouton smiley</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Niveaux de difficulté</h2>
+      <table>
+        <thead><tr><th>Niveau</th><th>Grille</th><th>Mines</th><th>Densité</th></tr></thead>
+        <tbody>
+          <tr><td>Débutant</td><td>9 × 9</td><td>10</td><td>≈ 12 %</td></tr>
+          <tr><td>Intermédiaire</td><td>16 × 16</td><td>40</td><td>≈ 16 %</td></tr>
+          <tr><td>Expert</td><td>16 × 30 (30 × 16 sur mobile en portrait)</td><td>99</td><td>≈ 21 %</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Astuces de Démineur pour débutants</h2>
+      <h3>1. Cherchez les chiffres déjà satisfaits</h3>
+      <p>Si un chiffre a déjà autant de drapeaux que sa valeur, toutes ses autres voisines cachées sont sûres : ouvrez-les ou utilisez l’ouverture rapide.</p>
+
+      <h3>2. Cases cachées = chiffre : ce sont toutes des mines</h3>
+      <p>Si un « 3 » n’a plus que trois voisines cachées, ce sont trois mines. Posez des drapeaux.</p>
+
+      <h3>3. Le motif 1-2-1</h3>
+      <p>Une rangée 1-2-1 le long de cases cachées : <strong>face aux 1 il y a des mines, face au 2 c’est sûr</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-1">
+        <div class="pattern"><span class="m">💣</span><span class="s">✓</span><span class="m">💣</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>4. Le motif 1-2-2-1</h3>
+      <p>Pour 1-2-2-1 : <strong>face aux deux 2 il y a des mines, face aux 1 c’est sûr</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-2-1">
+        <div class="pattern"><span class="s">✓</span><span class="m">💣</span><span class="m">💣</span><span class="s">✓</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>5. Pour aller plus vite : moins de drapeaux, plus d’ouvertures rapides</h3>
+      <p>Les joueurs rapides ne posent que les drapeaux utiles à l’ouverture rapide, puis ouvrent de grandes zones en cliquant sur les chiffres.</p>
+      <p class="legend">💣 = mine, ✓ = sûr. Ces motifs apparaissent surtout sur les bords et près des zones ouvertes.</p>
+
+      <h2>Qu’est-ce que le Démineur sans hasard ?</h2>
+      <p>Le Démineur classique laisse parfois un 50/50 : une case sur deux est minée et rien ne permet de savoir laquelle. Avec <strong>Sans hasard</strong>, la grille est créée après votre premier clic puis vérifiée par un solveur : elle est <strong>toujours soluble par la logique seule</strong>.</p>
+
+      <h2>Questions fréquentes sur le Démineur</h2>
+      <h3>Faut-il télécharger quelque chose ?</h3>
+      <p>Non. Le Démineur se joue directement dans le navigateur, sur ordinateur comme sur mobile, sans installation ni inscription.</p>
+      <h3>Que signifient les chiffres ?</h3>
+      <p>Le nombre de mines dans les 8 cases autour. Un 1 signifie exactement une mine voisine ; une case vide n’en a aucune et ouvre la zone.</p>
+      <h3>Peut-on tomber sur une mine au premier clic ?</h3>
+      <p>Non. La première case cliquée et ses 8 voisines ne contiennent jamais de mine.</p>
+      <h3>Qu’est-ce que le mode sans hasard ?</h3>
+      <p>Chaque grille se résout par la logique seule : vous n’aurez jamais à tenter un 50/50.</p>
+      <h3>Comment poser un drapeau sur mobile ?</h3>
+      <p>Faites un appui long sur la case, ou passez en mode « Drapeau » sous la grille puis touchez. Sur ordinateur, clic droit.</p>
+      <h3>Mes records sont-ils enregistrés ?</h3>
+      <p>Oui, dans le navigateur de cet appareil. Ils disparaissent si vous effacez les données de navigation. Pour vous mesurer au monde, utilisez les classements de l’app.</p>
+      <h3>Est-ce le même jeu que le Démineur classique de Windows ?</h3>
+      <p>Oui : mêmes règles et mêmes tailles Débutant, Intermédiaire et Expert, avec un premier clic toujours sûr.</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="langs" aria-label="Autres langues">
+      <a href="../" hreflang="zh-TW" lang="zh-Hant-TW" data-lang="zh-TW">繁體中文</a>
+      <a href="../zh-cn/" hreflang="zh-CN" lang="zh-Hans-CN" data-lang="zh-CN">简体中文</a>
+      <a href="../en/" hreflang="en" lang="en" data-lang="en">English</a>
+      <a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a>
+      <a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a>
+      <a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a>
+      <a href="../fr/" hreflang="fr" lang="fr" aria-current="page" data-lang="fr">Français</a>
+      <a href="../pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a>
+      <a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+      <a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a>
+    </nav>
+    <p><a href="../../fr/">Jeux de yusakuron</a>・<a href="../../minesweeper-speed-privacy-policy/">Politique de confidentialité</a>・<a href="mailto:yusakuron4@gmail.com">Contact</a></p>
+    <p>© 2026 yusakuron</p>
+  </footer>
+
+  <div id="result" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <button type="button" id="result-close" aria-label="Fermer">×</button>
+      <h2 id="result-title">🎉 Gagné !</h2>
+      <p id="result-time-label">Votre temps</p>
+      <p id="result-time">00:00.00</p>
+      <span class="record" id="result-record" hidden>🏆 Nouveau record !</span>
+      <p id="result-best"></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="result-view">Voir la grille</button>
+        <button type="button" class="btn primary" id="result-again">Rejouer</button>
+      </div>
+      <div class="cta">
+        <img src="../../minesweeper-speed-icon.png" alt="" width="48" height="48">
+        <div>
+          <p id="result-cta-text"></p>
+          <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=fr&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Obtenir l’app gratuite</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>window.MS_I18N = {"levels":{"beginner":"Débutant","intermediate":"Intermédiaire","expert":"Expert"},"boardAria":"Grille de Démineur {level}, {rows} lignes × {cols} colonnes, {mines} mines","best":"Record {t}","noRecord":"Aucun record","themeClean":"Thème : Épuré","themeRetro":"Thème : Rétro classique","dark":"🌙 Sombre","light":"☀️ Clair","win":"🎉 Gagné !","lose":"💥 Boum ! Vous avez touché une mine","bestRecord":"Record {level} : {t}","ctaWin":"Réussi en {s} s ! Téléchargez l’app et défiez le monde.","ctaLose":"Dans l’app : Aventure de 100 niveaux, Course du jour et classements mondiaux."};</script>
+  <script src="../game.js" defer></script>
+</body>
+</html>

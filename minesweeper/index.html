@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>踩地雷 線上玩｜免費經典踩地雷・免安裝 - 極速踩地雷</title>
+<meta name="description" content="免費線上踩地雷，打開就能玩、免下載免安裝！初級、中級、高級三種難度，第一下必安全，還有免猜純邏輯模式。附踩地雷規則、新手技巧與常見問題。">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://yusakuron4-hub.github.io/minesweeper/">
+<link rel="alternate" hreflang="zh-TW" href="https://yusakuron4-hub.github.io/minesweeper/">
+<link rel="alternate" hreflang="zh-CN" href="https://yusakuron4-hub.github.io/minesweeper/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<link rel="alternate" hreflang="ja" href="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<link rel="alternate" hreflang="ko" href="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<link rel="alternate" hreflang="es" href="https://yusakuron4-hub.github.io/minesweeper/es/">
+<link rel="alternate" hreflang="fr" href="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<link rel="alternate" hreflang="pt" href="https://yusakuron4-hub.github.io/minesweeper/pt/">
+<link rel="alternate" hreflang="ru" href="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<link rel="alternate" hreflang="ar" href="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<link rel="alternate" hreflang="x-default" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<meta name="theme-color" content="#F3F0EB">
+<link rel="icon" type="image/png" href="../minesweeper-speed-icon.png">
+<link rel="apple-touch-icon" href="../minesweeper-speed-icon.png">
+<link rel="manifest" href="manifest.json">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="極速踩地雷">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:url" content="https://yusakuron4-hub.github.io/minesweeper/">
+<meta property="og:title" content="踩地雷 線上玩｜免費・免安裝・打開就能玩">
+<meta property="og:description" content="經典踩地雷線上版：初級、中級、高級，第一下必安全，免猜純邏輯模式。來挑戰你的最快紀錄！">
+<meta property="og:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="踩地雷 線上玩｜免費・免安裝・打開就能玩">
+<meta name="twitter:description" content="經典踩地雷線上版：初級、中級、高級，第一下必安全，免猜純邏輯模式。來挑戰你的最快紀錄！">
+<meta name="twitter:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+
+<script>
+  // 語系：使用者選過就照選的；第一次來依瀏覽器語言自動選。搜尋引擎爬蟲不轉址。
+  (function () {
+    var LANGS = {"zh-TW":"./","zh-CN":"zh-cn/","en":"en/","ja":"ja/","ko":"ko/","es":"es/","fr":"fr/","pt":"pt/","ru":"ru/","ar":"ar/"};
+    var CUR = 'zh-TW';
+    if (/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit/i.test(navigator.userAgent)) return;
+    function detect() {
+      var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < list.length; i++) {
+        var t = String(list[i]).toLowerCase();
+        if (t.indexOf('zh') === 0) return /hans|-cn|-sg|-my/.test(t) && t.indexOf('hant') < 0 ? 'zh-CN' : 'zh-TW';
+        var b = t.split('-')[0];
+        if (LANGS[b]) return b;
+      }
+      return 'en';
+    }
+    var want = null;
+    try { want = JSON.parse(localStorage.getItem('ms_lang')); } catch (e) {}
+    if (!want || !LANGS[want]) {
+      want = detect();
+      try { localStorage.setItem('ms_lang', JSON.stringify(want)); } catch (e) {}
+    }
+    if (want !== CUR) location.replace(LANGS[want] + location.hash);
+  })();
+  // 先套用主題，避免畫面閃一下
+  (function () {
+    var d = document.documentElement;
+    try {
+      var t = JSON.parse(localStorage.getItem('ms_theme'));
+      var k = JSON.parse(localStorage.getItem('ms_dark'));
+      d.dataset.theme = t || 'clean';
+      d.dataset.dark = (k == null ? matchMedia('(prefers-color-scheme: dark)').matches : k) ? '1' : '0';
+    } catch (e) {
+      d.dataset.theme = 'clean';
+      d.dataset.dark = '0';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="style.css">
+<style>body { font-family: -apple-system, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif; }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "VideoGame",
+        "WebApplication"
+      ],
+      "@id": "https://yusakuron4-hub.github.io/minesweeper/#game",
+      "name": "踩地雷 線上玩 - 極速踩地雷",
+      "alternateName": [
+        "踩地雷",
+        "Minesweeper"
+      ],
+      "url": "https://yusakuron4-hub.github.io/minesweeper/",
+      "description": "免費線上踩地雷，打開就能玩、免下載免安裝！初級、中級、高級三種難度，第一下必安全，還有免猜純邏輯模式。附踩地雷規則、新手技巧與常見問題。",
+      "genre": [
+        "Puzzle",
+        "Logic"
+      ],
+      "gamePlatform": [
+        "Web browser",
+        "Android"
+      ],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "playMode": "SinglePlayer",
+      "inLanguage": "zh-Hant-TW",
+      "isAccessibleForFree": true,
+      "image": "https://yusakuron4-hub.github.io/minesweeper-speed-feature.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "yusakuron",
+        "url": "https://yusakuron4-hub.github.io/"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "yusakuron 的遊戲",
+          "item": "https://yusakuron4-hub.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "踩地雷 線上玩",
+          "item": "https://yusakuron4-hub.github.io/minesweeper/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "線上踩地雷要下載嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不用。打開這個網頁就能直接玩，電腦和手機都可以，免下載、免安裝、免註冊。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "踩地雷的數字是什麼意思？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "數字代表這一格周圍 8 格裡面有幾顆地雷。例如 1 表示周圍剛好有一顆地雷，空白則表示周圍沒有地雷，會自動幫你打開一大片。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "踩地雷第一下會踩到地雷嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不會。這裡的踩地雷第一下點擊的格子和周圍 8 格都保證沒有地雷。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什麼是免猜（純邏輯）模式？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "開啟免猜模式時，盤面保證只靠推理就能解開，不會遇到只能用猜的五五波局面，輸贏完全取決於你的邏輯與速度。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "手機怎麼插旗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在手機上長按格子就能插旗，也可以把下方的模式切到「插旗」，之後點擊就是插旗。電腦則是按滑鼠右鍵插旗。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我的最佳紀錄會保存嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "會。最佳紀錄保存在你這台裝置的瀏覽器裡，清除瀏覽資料後會消失。想和全世界比成績，可以下載極速踩地雷 App 使用全球排行榜。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "踩地雷和掃雷一樣嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一樣。台灣習慣叫「踩地雷」，中國大陸叫「掃雷」，英文叫 Minesweeper，規則完全相同。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../">
+      <img src="../minesweeper-speed-icon.png" alt="" width="32" height="32">
+      <span class="brand-name">極速踩地雷</span>
+    </a>
+    <label class="lang-select">
+      <span aria-hidden="true">🌐</span>
+      <select id="lang" aria-label="語言">
+        <option value="zh-TW" data-href="./" selected>繁體中文</option>
+        <option value="zh-CN" data-href="zh-cn/">简体中文</option>
+        <option value="en" data-href="en/">English</option>
+        <option value="ja" data-href="ja/">日本語</option>
+        <option value="ko" data-href="ko/">한국어</option>
+        <option value="es" data-href="es/">Español</option>
+        <option value="fr" data-href="fr/">Français</option>
+        <option value="pt" data-href="pt/">Português</option>
+        <option value="ru" data-href="ru/">Русский</option>
+        <option value="ar" data-href="ar/">العربية</option>
+      </select>
+    </label>
+    <a class="get-app" data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=zh-TW&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">下載 App</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>踩地雷 線上玩</h1>
+      <p>免費・免安裝・打開就能玩。第一下必安全，還有免猜純邏輯模式。</p>
+    </section>
+
+    <section id="game" aria-label="踩地雷遊戲" data-status="ready">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="難度">
+          <button type="button" data-level="beginner">初級</button>
+          <button type="button" data-level="intermediate">中級</button>
+          <button type="button" data-level="expert">高級</button>
+        </div>
+        <label class="toggle" title="盤面保證只靠推理就能解開">
+          <input type="checkbox" id="noguess"> 免猜模式
+        </label>
+        <span class="spacer"></span>
+        <button type="button" class="chip-btn" id="theme-btn">主題：極簡現代</button>
+        <button type="button" class="chip-btn" id="dark-btn">🌙 深色</button>
+      </div>
+
+      <div class="hud">
+        <div class="counter" aria-label="剩餘地雷">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pole" d="M7 3.5v17" /><path class="cloth" d="M8 4l10 4.2L8 12.4z" /><path class="pole" d="M4.5 20.5h6" /></svg>
+          <span id="mine-counter">10</span>
+        </div>
+        <button type="button" id="reset" aria-label="重新開始"></button>
+        <div class="counter time" aria-label="時間"><span id="timer">00:00.00</span></div>
+      </div>
+
+      <div id="board-wrap">
+        <div id="board" role="grid" aria-label="踩地雷盤面"></div>
+      </div>
+
+      <div class="below">
+        <div class="seg" role="group" aria-label="點擊模式">
+          <button type="button" data-mode="dig">⛏️ 挖掘</button>
+          <button type="button" data-mode="flag">🚩 插旗</button>
+        </div>
+        <span class="spacer"></span>
+        <span id="best">尚無紀錄</span>
+      </div>
+      <p class="hint">電腦：左鍵挖、右鍵插旗、點數字快速打開周圍。手機：點擊挖、長按插旗。按 N 開新局。</p>
+    </section>
+
+    <aside class="app-banner" aria-label="下載 App">
+      <img src="../minesweeper-speed-icon.png" alt="極速踩地雷 App 圖示" width="64" height="64" loading="lazy">
+      <div>
+        <h2>想要更多挑戰？下載極速踩地雷 App</h2>
+        <p>100 關冒險模式・每日競速・Google Play 遊戲全球排行榜與 25 個成就・重播最佳紀錄</p>
+      </div>
+      <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=zh-TW&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">免費下載</a>
+    </aside>
+
+    <article>
+      <h2>踩地雷規則：3 分鐘學會</h2>
+      <ol>
+        <li><strong>目標</strong>：把所有<strong>不是地雷</strong>的格子都打開就過關，踩到地雷就輸了。</li>
+        <li><strong>數字</strong>：打開的格子如果出現數字，代表它<strong>周圍 8 格</strong>（上下左右和四個斜角）裡有幾顆地雷。</li>
+        <li><strong>空白</strong>：周圍沒有地雷的格子會顯示空白，並自動幫你打開周圍一大片。</li>
+        <li><strong>插旗</strong>：確定是地雷的格子可以插上旗子做記號，避免不小心點到。左上角的數字是「地雷總數 − 已插旗數」。</li>
+        <li><strong>快速打開</strong>：當某個數字周圍插的旗數等於這個數字時，點一下那個數字，就會一次打開周圍其他所有格子。旗子插錯的話會直接踩雷，要小心！</li>
+      </ol>
+
+      <h2>操作方式</h2>
+      <table>
+        <thead><tr><th>動作</th><th>電腦</th><th>手機</th></tr></thead>
+        <tbody>
+          <tr><td>挖開格子</td><td>滑鼠左鍵</td><td>點一下</td></tr>
+          <tr><td>插旗／取消插旗</td><td>滑鼠右鍵</td><td>長按，或切到「插旗」模式後點擊</td></tr>
+          <tr><td>快速打開周圍</td><td>點已打開的數字（左鍵、右鍵或中鍵皆可）</td><td>點已打開的數字</td></tr>
+          <tr><td>重新開始</td><td>按笑臉，或鍵盤 N / F2</td><td>按笑臉</td></tr>
+        </tbody>
+      </table>
+
+      <h2>三種難度</h2>
+      <table>
+        <thead><tr><th>難度</th><th>盤面大小</th><th>地雷數</th><th>地雷密度</th></tr></thead>
+        <tbody>
+          <tr><td>初級</td><td>9 × 9</td><td>10</td><td>約 12%</td></tr>
+          <tr><td>中級</td><td>16 × 16</td><td>40</td><td>約 16%</td></tr>
+          <tr><td>高級</td><td>16 × 30（手機直向為 30 × 16）</td><td>99</td><td>約 21%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>踩地雷新手技巧</h2>
+      <h3>1. 先找「已經滿足」的數字</h3>
+      <p>如果一個數字周圍已經插了等量的旗子，它周圍其他未打開的格子就一定安全，可以放心打開（或直接點數字快速打開）。</p>
+
+      <h3>2. 未打開的格子數 = 數字，就全是地雷</h3>
+      <p>例如一個「3」周圍只剩 3 格沒打開，那這 3 格一定都是地雷，直接插旗。</p>
+
+      <h3>3. 牆邊的 1-2-1</h3>
+      <p>一排數字 1-2-1 貼著一排未打開的格子時：<strong>兩個 1 對面是地雷，2 對面是安全的</strong>。</p>
+      <div class="pattern-grid" aria-label="1-2-1">
+        <div class="pattern"><span class="m">💣</span><span class="s">✓</span><span class="m">💣</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>4. 牆邊的 1-2-2-1</h3>
+      <p>一排 1-2-2-1 時：<strong>中間兩個 2 對面是地雷，兩端的 1 對面是安全的</strong>。</p>
+      <div class="pattern-grid" aria-label="1-2-2-1">
+        <div class="pattern"><span class="s">✓</span><span class="m">💣</span><span class="m">💣</span><span class="s">✓</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>5. 想變快：少插旗、多用快速打開</h3>
+      <p>熟練的玩家只在「需要用來快速打開」的地方插旗，然後大量點數字一次打開周圍，可以省下非常多點擊次數。</p>
+      <p class="legend">💣＝地雷、✓＝安全。這些排法在盤面邊緣或已打開區域旁邊最常出現。</p>
+
+      <h2>什麼是免猜（純邏輯）模式？</h2>
+      <p>傳統踩地雷有時會遇到「兩格之中一定有一顆雷，但完全看不出是哪一格」的五五波局面，只能用猜的。開啟<strong>免猜模式</strong>後，盤面在你點下第一下時才產生，並且會用電腦解題程式檢查，<strong>保證只靠推理就能解完</strong>，輸贏完全取決於你的邏輯和速度。</p>
+
+      <h2>踩地雷常見問題</h2>
+      <h3>線上踩地雷要下載嗎？</h3>
+      <p>不用。打開這個網頁就能直接玩，電腦和手機都可以，免下載、免安裝、免註冊。</p>
+      <h3>踩地雷的數字是什麼意思？</h3>
+      <p>數字代表這一格周圍 8 格裡面有幾顆地雷。例如 1 表示周圍剛好有一顆地雷，空白則表示周圍沒有地雷，會自動幫你打開一大片。</p>
+      <h3>踩地雷第一下會踩到地雷嗎？</h3>
+      <p>不會。這裡的踩地雷第一下點擊的格子和周圍 8 格都保證沒有地雷。</p>
+      <h3>什麼是免猜（純邏輯）模式？</h3>
+      <p>開啟免猜模式時，盤面保證只靠推理就能解開，不會遇到只能用猜的五五波局面，輸贏完全取決於你的邏輯與速度。</p>
+      <h3>手機怎麼插旗？</h3>
+      <p>在手機上長按格子就能插旗，也可以把下方的模式切到「插旗」，之後點擊就是插旗。電腦則是按滑鼠右鍵插旗。</p>
+      <h3>我的最佳紀錄會保存嗎？</h3>
+      <p>會。最佳紀錄保存在你這台裝置的瀏覽器裡，清除瀏覽資料後會消失。想和全世界比成績，可以下載極速踩地雷 App 使用全球排行榜。</p>
+      <h3>踩地雷和掃雷一樣嗎？</h3>
+      <p>一樣。台灣習慣叫「踩地雷」，中國大陸叫「掃雷」，英文叫 Minesweeper，規則完全相同。</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="langs" aria-label="其他語言">
+      <a href="./" hreflang="zh-TW" lang="zh-Hant-TW" aria-current="page" data-lang="zh-TW">繁體中文</a>
+      <a href="zh-cn/" hreflang="zh-CN" lang="zh-Hans-CN" data-lang="zh-CN">简体中文</a>
+      <a href="en/" hreflang="en" lang="en" data-lang="en">English</a>
+      <a href="ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a>
+      <a href="ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a>
+      <a href="es/" hreflang="es" lang="es" data-lang="es">Español</a>
+      <a href="fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      <a href="pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a>
+      <a href="ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+      <a href="ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a>
+    </nav>
+    <p><a href="../">yusakuron 的遊戲</a>・<a href="../minesweeper-speed-privacy-policy/">隱私權政策</a>・<a href="mailto:yusakuron4@gmail.com">聯絡我們</a></p>
+    <p>© 2026 yusakuron</p>
+  </footer>
+
+  <div id="result" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <button type="button" id="result-close" aria-label="關閉">×</button>
+      <h2 id="result-title">🎉 過關！</h2>
+      <p id="result-time-label">通關時間</p>
+      <p id="result-time">00:00.00</p>
+      <span class="record" id="result-record" hidden>🏆 新紀錄！</span>
+      <p id="result-best"></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="result-view">看盤面</button>
+        <button type="button" class="btn primary" id="result-again">再玩一次</button>
+      </div>
+      <div class="cta">
+        <img src="../minesweeper-speed-icon.png" alt="" width="48" height="48">
+        <div>
+          <p id="result-cta-text"></p>
+          <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=zh-TW&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">免費下載 App</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>window.MS_I18N = {"levels":{"beginner":"初級","intermediate":"中級","expert":"高級"},"boardAria":"{level}踩地雷盤面，{rows} 列 {cols} 行，{mines} 顆地雷","best":"最佳 {t}","noRecord":"尚無紀錄","themeClean":"主題：極簡現代","themeRetro":"主題：經典懷舊","dark":"🌙 深色","light":"☀️ 淺色","win":"🎉 過關！","lose":"💥 踩到地雷了","bestRecord":"{level}最佳紀錄 {t}","ctaWin":"你用了 {s} 秒！下載 App，和全世界比速度。","ctaLose":"下載 App：100 關冒險、每日競速、全球排行榜。"};</script>
+  <script src="game.js" defer></script>
+</body>
+</html>

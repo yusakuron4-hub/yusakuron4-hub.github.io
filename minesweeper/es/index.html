@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Buscaminas online gratis – Sin descargar | Minesweeper Speed</title>
+<meta name="description" content="Juega al Buscaminas clásico online gratis, sin descargas ni registro. Niveles Principiante, Intermedio y Experto, primer toque seguro y modo sin adivinar. Con reglas, trucos y preguntas frecuentes.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://yusakuron4-hub.github.io/minesweeper/es/">
+<link rel="alternate" hreflang="zh-TW" href="https://yusakuron4-hub.github.io/minesweeper/">
+<link rel="alternate" hreflang="zh-CN" href="https://yusakuron4-hub.github.io/minesweeper/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<link rel="alternate" hreflang="ja" href="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<link rel="alternate" hreflang="ko" href="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<link rel="alternate" hreflang="es" href="https://yusakuron4-hub.github.io/minesweeper/es/">
+<link rel="alternate" hreflang="fr" href="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<link rel="alternate" hreflang="pt" href="https://yusakuron4-hub.github.io/minesweeper/pt/">
+<link rel="alternate" hreflang="ru" href="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<link rel="alternate" hreflang="ar" href="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<link rel="alternate" hreflang="x-default" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<meta name="theme-color" content="#F3F0EB">
+<link rel="icon" type="image/png" href="../../minesweeper-speed-icon.png">
+<link rel="apple-touch-icon" href="../../minesweeper-speed-icon.png">
+<link rel="manifest" href="../manifest.json">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Minesweeper Speed">
+<meta property="og:locale" content="es_419">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:url" content="https://yusakuron4-hub.github.io/minesweeper/es/">
+<meta property="og:title" content="Buscaminas online gratis – Sin descargar">
+<meta property="og:description" content="El Buscaminas clásico en tu navegador: Principiante, Intermedio y Experto, primer toque seguro y modo sin adivinar. ¡Supera tu mejor tiempo!">
+<meta property="og:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Buscaminas online gratis – Sin descargar">
+<meta name="twitter:description" content="El Buscaminas clásico en tu navegador: Principiante, Intermedio y Experto, primer toque seguro y modo sin adivinar. ¡Supera tu mejor tiempo!">
+<meta name="twitter:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+
+<script>
+  // 語系：使用者選過就照選的；第一次來依瀏覽器語言自動選。搜尋引擎爬蟲不轉址。
+  (function () {
+    var LANGS = {"zh-TW":"../","zh-CN":"../zh-cn/","en":"../en/","ja":"../ja/","ko":"../ko/","es":"../es/","fr":"../fr/","pt":"../pt/","ru":"../ru/","ar":"../ar/"};
+    var CUR = 'es';
+    if (/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit/i.test(navigator.userAgent)) return;
+    function detect() {
+      var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < list.length; i++) {
+        var t = String(list[i]).toLowerCase();
+        if (t.indexOf('zh') === 0) return /hans|-cn|-sg|-my/.test(t) && t.indexOf('hant') < 0 ? 'zh-CN' : 'zh-TW';
+        var b = t.split('-')[0];
+        if (LANGS[b]) return b;
+      }
+      return 'en';
+    }
+    var want = null;
+    try { want = JSON.parse(localStorage.getItem('ms_lang')); } catch (e) {}
+    if (!want || !LANGS[want]) {
+      want = detect();
+      try { localStorage.setItem('ms_lang', JSON.stringify(want)); } catch (e) {}
+    }
+    if (want !== CUR) location.replace(LANGS[want] + location.hash);
+  })();
+  // 先套用主題，避免畫面閃一下
+  (function () {
+    var d = document.documentElement;
+    try {
+      var t = JSON.parse(localStorage.getItem('ms_theme'));
+      var k = JSON.parse(localStorage.getItem('ms_dark'));
+      d.dataset.theme = t || 'clean';
+      d.dataset.dark = (k == null ? matchMedia('(prefers-color-scheme: dark)').matches : k) ? '1' : '0';
+    } catch (e) {
+      d.dataset.theme = 'clean';
+      d.dataset.dark = '0';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "VideoGame",
+        "WebApplication"
+      ],
+      "@id": "https://yusakuron4-hub.github.io/minesweeper/es/#game",
+      "name": "Buscaminas online - Minesweeper Speed",
+      "alternateName": [
+        "Buscaminas",
+        "Minesweeper"
+      ],
+      "url": "https://yusakuron4-hub.github.io/minesweeper/es/",
+      "description": "Juega al Buscaminas clásico online gratis, sin descargas ni registro. Niveles Principiante, Intermedio y Experto, primer toque seguro y modo sin adivinar. Con reglas, trucos y preguntas frecuentes.",
+      "genre": [
+        "Puzzle",
+        "Logic"
+      ],
+      "gamePlatform": [
+        "Web browser",
+        "Android"
+      ],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "playMode": "SinglePlayer",
+      "inLanguage": "es",
+      "isAccessibleForFree": true,
+      "image": "https://yusakuron4-hub.github.io/minesweeper-speed-feature.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "yusakuron",
+        "url": "https://yusakuron4-hub.github.io/"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Juegos de yusakuron",
+          "item": "https://yusakuron4-hub.github.io/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Buscaminas online",
+          "item": "https://yusakuron4-hub.github.io/minesweeper/es/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Tengo que descargar algo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El Buscaminas funciona directamente en el navegador del ordenador o del móvil, sin descargas ni registro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significan los números?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cuántas minas hay en las 8 casillas que rodean a esa casilla. Un 1 es exactamente una mina; una casilla vacía no tiene ninguna y abre la zona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo pisar una mina en el primer toque?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La primera casilla y sus 8 vecinas nunca tienen minas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el modo sin adivinar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Todos los tableros se pueden resolver solo con lógica, así que nunca tendrás que jugártela a un 50/50."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo pongo banderas en el móvil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mantén pulsada la casilla o cambia el modo de abajo a «Bandera» y toca. En PC, clic derecho."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se guardan mis mejores tiempos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, en el navegador de este dispositivo. Se borran si eliminas los datos de navegación. Para competir con el mundo, usa las clasificaciones de la app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es igual que el Buscaminas clásico de Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí: mismas reglas y mismos tamaños Principiante, Intermedio y Experto, con primer toque siempre seguro."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../es/">
+      <img src="../../minesweeper-speed-icon.png" alt="" width="32" height="32">
+      <span class="brand-name">Minesweeper Speed</span>
+    </a>
+    <label class="lang-select">
+      <span aria-hidden="true">🌐</span>
+      <select id="lang" aria-label="Idioma">
+        <option value="zh-TW" data-href="../">繁體中文</option>
+        <option value="zh-CN" data-href="../zh-cn/">简体中文</option>
+        <option value="en" data-href="../en/">English</option>
+        <option value="ja" data-href="../ja/">日本語</option>
+        <option value="ko" data-href="../ko/">한국어</option>
+        <option value="es" data-href="../es/" selected>Español</option>
+        <option value="fr" data-href="../fr/">Français</option>
+        <option value="pt" data-href="../pt/">Português</option>
+        <option value="ru" data-href="../ru/">Русский</option>
+        <option value="ar" data-href="../ar/">العربية</option>
+      </select>
+    </label>
+    <a class="get-app" data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=es-419&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Descargar app</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Buscaminas online</h1>
+      <p>Gratis, sin descargar, empieza al instante. El primer toque siempre es seguro y hay modo sin adivinar.</p>
+    </section>
+
+    <section id="game" aria-label="Juego de Buscaminas" data-status="ready">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Dificultad">
+          <button type="button" data-level="beginner">Principiante</button>
+          <button type="button" data-level="intermediate">Intermedio</button>
+          <button type="button" data-level="expert">Experto</button>
+        </div>
+        <label class="toggle" title="Todos los tableros se resuelven solo con lógica">
+          <input type="checkbox" id="noguess"> Sin adivinar
+        </label>
+        <span class="spacer"></span>
+        <button type="button" class="chip-btn" id="theme-btn">Tema: Moderno</button>
+        <button type="button" class="chip-btn" id="dark-btn">🌙 Oscuro</button>
+      </div>
+
+      <div class="hud">
+        <div class="counter" aria-label="Minas restantes">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pole" d="M7 3.5v17" /><path class="cloth" d="M8 4l10 4.2L8 12.4z" /><path class="pole" d="M4.5 20.5h6" /></svg>
+          <span id="mine-counter">10</span>
+        </div>
+        <button type="button" id="reset" aria-label="Nueva partida"></button>
+        <div class="counter time" aria-label="Tiempo"><span id="timer">00:00.00</span></div>
+      </div>
+
+      <div id="board-wrap">
+        <div id="board" role="grid" aria-label="Tablero de Buscaminas"></div>
+      </div>
+
+      <div class="below">
+        <div class="seg" role="group" aria-label="Modo de toque">
+          <button type="button" data-mode="dig">⛏️ Cavar</button>
+          <button type="button" data-mode="flag">🚩 Bandera</button>
+        </div>
+        <span class="spacer"></span>
+        <span id="best">Sin récord</span>
+      </div>
+      <p class="hint">PC: clic izquierdo para cavar, clic derecho para bandera, clic en un número para abrir alrededor. Móvil: toca para cavar, mantén pulsado para bandera. Pulsa N para una partida nueva.</p>
+    </section>
+
+    <aside class="app-banner" aria-label="Descargar app">
+      <img src="../../minesweeper-speed-icon.png" alt="Icono de la app Minesweeper Speed" width="64" height="64" loading="lazy">
+      <div>
+        <h2>¿Quieres más? Descarga la app Minesweeper Speed</h2>
+        <p>Aventura de 100 niveles · Carrera diaria · Clasificaciones de Google Play Juegos y 25 logros · Repeticiones</p>
+      </div>
+      <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=es-419&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Descarga gratis</a>
+    </aside>
+
+    <article>
+      <h2>Cómo jugar al Buscaminas</h2>
+      <ol>
+        <li><strong>Objetivo</strong>: abre todas las casillas que <strong>no son minas</strong>. Si abres una mina, pierdes.</li>
+        <li><strong>Números</strong>: indican cuántas minas hay en las <strong>8 casillas vecinas</strong> (incluidas las diagonales).</li>
+        <li><strong>Casillas vacías</strong>: no tienen minas alrededor y abren automáticamente la zona cercana.</li>
+        <li><strong>Banderas</strong>: marca las casillas que seguro son minas para no abrirlas por error. El contador muestra minas menos banderas.</li>
+        <li><strong>Apertura rápida</strong>: si un número ya tiene tantas banderas como su valor, haz clic en él para abrir el resto de vecinas de una vez. Si una bandera está mal, explotará una mina.</li>
+      </ol>
+
+      <h2>Controles</h2>
+      <table>
+        <thead><tr><th>Acción</th><th>PC</th><th>Móvil</th></tr></thead>
+        <tbody>
+          <tr><td>Abrir una casilla</td><td>Clic izquierdo</td><td>Tocar</td></tr>
+          <tr><td>Poner / quitar bandera</td><td>Clic derecho</td><td>Mantener pulsado, o modo Bandera y tocar</td></tr>
+          <tr><td>Apertura rápida</td><td>Clic en un número abierto (cualquier botón)</td><td>Tocar un número abierto</td></tr>
+          <tr><td>Nueva partida</td><td>Botón de la carita, o N / F2</td><td>Botón de la carita</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Niveles de dificultad</h2>
+      <table>
+        <thead><tr><th>Nivel</th><th>Tablero</th><th>Minas</th><th>Densidad</th></tr></thead>
+        <tbody>
+          <tr><td>Principiante</td><td>9 × 9</td><td>10</td><td>≈ 12%</td></tr>
+          <tr><td>Intermedio</td><td>16 × 16</td><td>40</td><td>≈ 16%</td></tr>
+          <tr><td>Experto</td><td>16 × 30 (30 × 16 en móvil vertical)</td><td>99</td><td>≈ 21%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Trucos de Buscaminas para principiantes</h2>
+      <h3>1. Busca números ya satisfechos</h3>
+      <p>Si un número ya tiene tantas banderas como su valor, las demás casillas ocultas a su alrededor son seguras. Ábrelas o usa la apertura rápida.</p>
+
+      <h3>2. Casillas ocultas = número: todas son minas</h3>
+      <p>Si a un «3» le quedan exactamente tres casillas ocultas, las tres son minas. Ponles bandera.</p>
+
+      <h3>3. El patrón 1-2-1</h3>
+      <p>Una fila 1-2-1 junto a casillas ocultas: <strong>frente a los 1 hay minas y frente al 2 es seguro</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-1">
+        <div class="pattern"><span class="m">💣</span><span class="s">✓</span><span class="m">💣</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>4. El patrón 1-2-2-1</h3>
+      <p>Con 1-2-2-1: <strong>frente a los dos 2 hay minas y frente a los 1 es seguro</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-2-1">
+        <div class="pattern"><span class="s">✓</span><span class="m">💣</span><span class="m">💣</span><span class="s">✓</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>5. Para ir más rápido: menos banderas, más apertura rápida</h3>
+      <p>Los jugadores rápidos solo ponen las banderas necesarias y abren zonas enteras haciendo clic en los números.</p>
+      <p class="legend">💣 = mina, ✓ = seguro. Estos patrones aparecen sobre todo en los bordes y junto a zonas abiertas.</p>
+
+      <h2>¿Qué es el Buscaminas sin adivinar?</h2>
+      <p>En el Buscaminas clásico a veces queda un 50/50: una de dos casillas es mina y no hay forma de saber cuál. Con <strong>Sin adivinar</strong> activado, el tablero se genera tras tu primer toque y lo revisa un solucionador, así que <strong>siempre se resuelve solo con lógica</strong>.</p>
+
+      <h2>Preguntas frecuentes sobre el Buscaminas</h2>
+      <h3>¿Tengo que descargar algo?</h3>
+      <p>No. El Buscaminas funciona directamente en el navegador del ordenador o del móvil, sin descargas ni registro.</p>
+      <h3>¿Qué significan los números?</h3>
+      <p>Cuántas minas hay en las 8 casillas que rodean a esa casilla. Un 1 es exactamente una mina; una casilla vacía no tiene ninguna y abre la zona.</p>
+      <h3>¿Puedo pisar una mina en el primer toque?</h3>
+      <p>No. La primera casilla y sus 8 vecinas nunca tienen minas.</p>
+      <h3>¿Qué es el modo sin adivinar?</h3>
+      <p>Todos los tableros se pueden resolver solo con lógica, así que nunca tendrás que jugártela a un 50/50.</p>
+      <h3>¿Cómo pongo banderas en el móvil?</h3>
+      <p>Mantén pulsada la casilla o cambia el modo de abajo a «Bandera» y toca. En PC, clic derecho.</p>
+      <h3>¿Se guardan mis mejores tiempos?</h3>
+      <p>Sí, en el navegador de este dispositivo. Se borran si eliminas los datos de navegación. Para competir con el mundo, usa las clasificaciones de la app.</p>
+      <h3>¿Es igual que el Buscaminas clásico de Windows?</h3>
+      <p>Sí: mismas reglas y mismos tamaños Principiante, Intermedio y Experto, con primer toque siempre seguro.</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="langs" aria-label="Otros idiomas">
+      <a href="../" hreflang="zh-TW" lang="zh-Hant-TW" data-lang="zh-TW">繁體中文</a>
+      <a href="../zh-cn/" hreflang="zh-CN" lang="zh-Hans-CN" data-lang="zh-CN">简体中文</a>
+      <a href="../en/" hreflang="en" lang="en" data-lang="en">English</a>
+      <a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a>
+      <a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a>
+      <a href="../es/" hreflang="es" lang="es" aria-current="page" data-lang="es">Español</a>
+      <a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      <a href="../pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a>
+      <a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+      <a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a>
+    </nav>
+    <p><a href="../../es/">Juegos de yusakuron</a>・<a href="../../minesweeper-speed-privacy-policy/">Política de privacidad</a>・<a href="mailto:yusakuron4@gmail.com">Contacto</a></p>
+    <p>© 2026 yusakuron</p>
+  </footer>
+
+  <div id="result" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <button type="button" id="result-close" aria-label="Cerrar">×</button>
+      <h2 id="result-title">🎉 ¡Superado!</h2>
+      <p id="result-time-label">Tu tiempo</p>
+      <p id="result-time">00:00.00</p>
+      <span class="record" id="result-record" hidden>🏆 ¡Nuevo récord!</span>
+      <p id="result-best"></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="result-view">Ver tablero</button>
+        <button type="button" class="btn primary" id="result-again">Jugar de nuevo</button>
+      </div>
+      <div class="cta">
+        <img src="../../minesweeper-speed-icon.png" alt="" width="48" height="48">
+        <div>
+          <p id="result-cta-text"></p>
+          <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=es-419&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Descarga la app gratis</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>window.MS_I18N = {"levels":{"beginner":"Principiante","intermediate":"Intermedio","expert":"Experto"},"boardAria":"Tablero de Buscaminas {level}, {rows} filas × {cols} columnas, {mines} minas","best":"Mejor {t}","noRecord":"Sin récord","themeClean":"Tema: Moderno","themeRetro":"Tema: Clásico retro","dark":"🌙 Oscuro","light":"☀️ Claro","win":"🎉 ¡Superado!","lose":"💥 ¡Pisaste una mina!","bestRecord":"Mejor marca en {level}: {t}","ctaWin":"¡Lo lograste en {s} s! Descarga la app y compite con el mundo.","ctaLose":"Descarga la app: Aventura de 100 niveles, Carrera diaria y clasificaciones mundiales."};</script>
+  <script src="../game.js" defer></script>
+</body>
+</html>

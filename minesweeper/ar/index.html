@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>كاسحة الألغام أونلاين مجانًا – بدون تحميل | Minesweeper Speed</title>
+<meta name="description" content="العب كاسحة الألغام الكلاسيكية أونلاين مجانًا بدون تحميل أو تسجيل. مستويات مبتدئ ومتوسط وخبير، نقرة أولى آمنة ووضع بلا تخمين. مع القواعد والنصائح والأسئلة الشائعة.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<link rel="alternate" hreflang="zh-TW" href="https://yusakuron4-hub.github.io/minesweeper/">
+<link rel="alternate" hreflang="zh-CN" href="https://yusakuron4-hub.github.io/minesweeper/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<link rel="alternate" hreflang="ja" href="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<link rel="alternate" hreflang="ko" href="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<link rel="alternate" hreflang="es" href="https://yusakuron4-hub.github.io/minesweeper/es/">
+<link rel="alternate" hreflang="fr" href="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<link rel="alternate" hreflang="pt" href="https://yusakuron4-hub.github.io/minesweeper/pt/">
+<link rel="alternate" hreflang="ru" href="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<link rel="alternate" hreflang="ar" href="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<link rel="alternate" hreflang="x-default" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<meta name="theme-color" content="#F3F0EB">
+<link rel="icon" type="image/png" href="../../minesweeper-speed-icon.png">
+<link rel="apple-touch-icon" href="../../minesweeper-speed-icon.png">
+<link rel="manifest" href="../manifest.json">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Minesweeper Speed">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:url" content="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<meta property="og:title" content="كاسحة الألغام أونلاين مجانًا – بدون تحميل">
+<meta property="og:description" content="كاسحة الألغام الكلاسيكية في المتصفح: مبتدئ ومتوسط وخبير، نقرة أولى آمنة ووضع بلا تخمين. حطّم رقمك القياسي!">
+<meta property="og:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="كاسحة الألغام أونلاين مجانًا – بدون تحميل">
+<meta name="twitter:description" content="كاسحة الألغام الكلاسيكية في المتصفح: مبتدئ ومتوسط وخبير، نقرة أولى آمنة ووضع بلا تخمين. حطّم رقمك القياسي!">
+<meta name="twitter:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+
+<script>
+  // 語系：使用者選過就照選的；第一次來依瀏覽器語言自動選。搜尋引擎爬蟲不轉址。
+  (function () {
+    var LANGS = {"zh-TW":"../","zh-CN":"../zh-cn/","en":"../en/","ja":"../ja/","ko":"../ko/","es":"../es/","fr":"../fr/","pt":"../pt/","ru":"../ru/","ar":"../ar/"};
+    var CUR = 'ar';
+    if (/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit/i.test(navigator.userAgent)) return;
+    function detect() {
+      var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < list.length; i++) {
+        var t = String(list[i]).toLowerCase();
+        if (t.indexOf('zh') === 0) return /hans|-cn|-sg|-my/.test(t) && t.indexOf('hant') < 0 ? 'zh-CN' : 'zh-TW';
+        var b = t.split('-')[0];
+        if (LANGS[b]) return b;
+      }
+      return 'en';
+    }
+    var want = null;
+    try { want = JSON.parse(localStorage.getItem('ms_lang')); } catch (e) {}
+    if (!want || !LANGS[want]) {
+      want = detect();
+      try { localStorage.setItem('ms_lang', JSON.stringify(want)); } catch (e) {}
+    }
+    if (want !== CUR) location.replace(LANGS[want] + location.hash);
+  })();
+  // 先套用主題，避免畫面閃一下
+  (function () {
+    var d = document.documentElement;
+    try {
+      var t = JSON.parse(localStorage.getItem('ms_theme'));
+      var k = JSON.parse(localStorage.getItem('ms_dark'));
+      d.dataset.theme = t || 'clean';
+      d.dataset.dark = (k == null ? matchMedia('(prefers-color-scheme: dark)').matches : k) ? '1' : '0';
+    } catch (e) {
+      d.dataset.theme = 'clean';
+      d.dataset.dark = '0';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+<style>body { font-family: -apple-system, "Segoe UI", "Noto Sans Arabic", "Segoe UI", "Tahoma", sans-serif; }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "VideoGame",
+        "WebApplication"
+      ],
+      "@id": "https://yusakuron4-hub.github.io/minesweeper/ar/#game",
+      "name": "كاسحة الألغام أونلاين - Minesweeper Speed",
+      "alternateName": [
+        "كاسحة الألغام",
+        "Minesweeper"
+      ],
+      "url": "https://yusakuron4-hub.github.io/minesweeper/ar/",
+      "description": "العب كاسحة الألغام الكلاسيكية أونلاين مجانًا بدون تحميل أو تسجيل. مستويات مبتدئ ومتوسط وخبير، نقرة أولى آمنة ووضع بلا تخمين. مع القواعد والنصائح والأسئلة الشائعة.",
+      "genre": [
+        "Puzzle",
+        "Logic"
+      ],
+      "gamePlatform": [
+        "Web browser",
+        "Android"
+      ],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "playMode": "SinglePlayer",
+      "inLanguage": "ar",
+      "isAccessibleForFree": true,
+      "image": "https://yusakuron4-hub.github.io/minesweeper-speed-feature.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "yusakuron",
+        "url": "https://yusakuron4-hub.github.io/"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ألعاب yusakuron",
+          "item": "https://yusakuron4-hub.github.io/ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "كاسحة الألغام أونلاين",
+          "item": "https://yusakuron4-hub.github.io/minesweeper/ar/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل أحتاج إلى تحميل شيء؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا. تعمل اللعبة مباشرة في متصفح الكمبيوتر أو الهاتف بدون تثبيت أو تسجيل."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ماذا تعني الأرقام؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "عدد الألغام في المربعات الثمانية المحيطة. الرقم 1 يعني لغمًا واحدًا بالضبط، والمربع الفارغ لا ألغام حوله ويفتح المنطقة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكن أن أدوس لغمًا في النقرة الأولى؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا. المربع الأول والمربعات الثمانية حوله خالية دائمًا من الألغام."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما هو وضع بلا تخمين؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "كل لوحة قابلة للحل بالمنطق وحده، فلن تضطر أبدًا إلى تخمين 50/50."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف أضع علمًا على الهاتف؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "اضغط مطولًا على المربع، أو غيّر الوضع أسفل اللوحة إلى «علم» ثم المس. على الكمبيوتر استخدم النقرة اليمنى."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل تُحفظ أفضل أوقاتي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، في متصفح هذا الجهاز، وتُحذف إذا مسحت بيانات التصفح. للمنافسة عالميًا استخدم لوحات الترتيب في التطبيق."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل هي نفس لعبة كاسحة الألغام الكلاسيكية في Windows؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم: القواعد نفسها وأحجام المبتدئ والمتوسط والخبير نفسها، مع نقرة أولى آمنة دائمًا."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../ar/">
+      <img src="../../minesweeper-speed-icon.png" alt="" width="32" height="32">
+      <span class="brand-name">Minesweeper Speed</span>
+    </a>
+    <label class="lang-select">
+      <span aria-hidden="true">🌐</span>
+      <select id="lang" aria-label="اللغة">
+        <option value="zh-TW" data-href="../">繁體中文</option>
+        <option value="zh-CN" data-href="../zh-cn/">简体中文</option>
+        <option value="en" data-href="../en/">English</option>
+        <option value="ja" data-href="../ja/">日本語</option>
+        <option value="ko" data-href="../ko/">한국어</option>
+        <option value="es" data-href="../es/">Español</option>
+        <option value="fr" data-href="../fr/">Français</option>
+        <option value="pt" data-href="../pt/">Português</option>
+        <option value="ru" data-href="../ru/">Русский</option>
+        <option value="ar" data-href="../ar/" selected>العربية</option>
+      </select>
+    </label>
+    <a class="get-app" data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ar&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">حمّل التطبيق</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>كاسحة الألغام أونلاين</h1>
+      <p>مجانية وبدون تحميل وتبدأ فورًا. النقرة الأولى آمنة دائمًا، مع وضع بلا تخمين.</p>
+    </section>
+
+    <section id="game" aria-label="لعبة كاسحة الألغام" data-status="ready">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="الصعوبة">
+          <button type="button" data-level="beginner">مبتدئ</button>
+          <button type="button" data-level="intermediate">متوسط</button>
+          <button type="button" data-level="expert">خبير</button>
+        </div>
+        <label class="toggle" title="كل لوحة قابلة للحل بالمنطق وحده">
+          <input type="checkbox" id="noguess"> بلا تخمين
+        </label>
+        <span class="spacer"></span>
+        <button type="button" class="chip-btn" id="theme-btn">السمة: عصرية</button>
+        <button type="button" class="chip-btn" id="dark-btn">🌙 داكن</button>
+      </div>
+
+      <div class="hud">
+        <div class="counter" aria-label="الألغام المتبقية">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pole" d="M7 3.5v17" /><path class="cloth" d="M8 4l10 4.2L8 12.4z" /><path class="pole" d="M4.5 20.5h6" /></svg>
+          <span id="mine-counter">10</span>
+        </div>
+        <button type="button" id="reset" aria-label="لعبة جديدة"></button>
+        <div class="counter time" aria-label="الوقت"><span id="timer">00:00.00</span></div>
+      </div>
+
+      <div id="board-wrap">
+        <div id="board" role="grid" aria-label="لوحة كاسحة الألغام"></div>
+      </div>
+
+      <div class="below">
+        <div class="seg" role="group" aria-label="وضع اللمس">
+          <button type="button" data-mode="dig">⛏️ حفر</button>
+          <button type="button" data-mode="flag">🚩 علم</button>
+        </div>
+        <span class="spacer"></span>
+        <span id="best">لا يوجد رقم بعد</span>
+      </div>
+      <p class="hint">الكمبيوتر: نقرة يسرى للحفر، نقرة يمنى للعلم، انقر على رقم لفتح ما حوله. الهاتف: المس للحفر، واضغط مطولًا لوضع علم. اضغط N للعبة جديدة.</p>
+    </section>
+
+    <aside class="app-banner" aria-label="حمّل التطبيق">
+      <img src="../../minesweeper-speed-icon.png" alt="أيقونة تطبيق Minesweeper Speed" width="64" height="64" loading="lazy">
+      <div>
+        <h2>تريد المزيد؟ حمّل تطبيق Minesweeper Speed</h2>
+        <p>مغامرة من 100 مستوى · السباق اليومي · لوحات ترتيب ألعاب Google Play و25 إنجازًا · إعادة العرض</p>
+      </div>
+      <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ar&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">تحميل مجاني</a>
+    </aside>
+
+    <article>
+      <h2>كيف تلعب كاسحة الألغام</h2>
+      <ol>
+        <li><strong>الهدف</strong>: افتح كل المربعات التي <strong>ليست ألغامًا</strong>. إذا فتحت لغمًا تخسر.</li>
+        <li><strong>الأرقام</strong>: تبيّن عدد الألغام في <strong>المربعات الثمانية المجاورة</strong> (بما فيها القطرية).</li>
+        <li><strong>المربعات الفارغة</strong>: لا ألغام حولها، وتفتح المنطقة المحيطة تلقائيًا.</li>
+        <li><strong>الأعلام</strong>: ضع علمًا على المربعات التي تتأكد أنها ألغام حتى لا تنقرها خطأً. العدّاد يعرض الألغام ناقص الأعلام.</li>
+        <li><strong>الفتح السريع</strong>: إذا كان حول رقمٍ عددُ أعلام يساويه، انقر عليه لفتح بقية المربعات المجاورة دفعة واحدة. العلم الخاطئ يفجّر لغمًا!</li>
+      </ol>
+
+      <h2>طريقة التحكم</h2>
+      <table>
+        <thead><tr><th>الإجراء</th><th>الكمبيوتر</th><th>الهاتف</th></tr></thead>
+        <tbody>
+          <tr><td>فتح مربع</td><td>نقرة يسرى</td><td>لمسة</td></tr>
+          <tr><td>وضع / إزالة علم</td><td>نقرة يمنى</td><td>ضغط مطوّل، أو وضع «علم» ثم لمس</td></tr>
+          <tr><td>الفتح السريع</td><td>انقر رقمًا مفتوحًا (أي زر)</td><td>المس رقمًا مفتوحًا</td></tr>
+          <tr><td>لعبة جديدة</td><td>زر الوجه المبتسم، أو N / F2</td><td>زر الوجه المبتسم</td></tr>
+        </tbody>
+      </table>
+
+      <h2>مستويات الصعوبة</h2>
+      <table>
+        <thead><tr><th>المستوى</th><th>اللوحة</th><th>الألغام</th><th>الكثافة</th></tr></thead>
+        <tbody>
+          <tr><td>مبتدئ</td><td>9 × 9</td><td>10</td><td>≈ 12%</td></tr>
+          <tr><td>متوسط</td><td>16 × 16</td><td>40</td><td>≈ 16%</td></tr>
+          <tr><td>خبير</td><td>16 × 30 (‏30 × 16 على الهاتف عموديًا)</td><td>99</td><td>≈ 21%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>نصائح للمبتدئين</h2>
+      <h3>1. ابحث عن الأرقام المكتملة</h3>
+      <p>إذا كان حول رقمٍ عددُ أعلام يساوي قيمته، فبقية المربعات المغلقة حوله آمنة. افتحها أو استخدم الفتح السريع.</p>
+
+      <h3>2. المربعات المغلقة = الرقم؟ كلها ألغام</h3>
+      <p>إذا بقي حول «3» ثلاثة مربعات مغلقة فقط، فكلها ألغام. ضع عليها أعلامًا.</p>
+
+      <h3>3. نمط 1-2-1</h3>
+      <p>صف 1-2-1 بجوار مربعات مغلقة: <strong>مقابل الرقمين 1 ألغام، ومقابل 2 آمن</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-1">
+        <div class="pattern"><span class="m">💣</span><span class="s">✓</span><span class="m">💣</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>4. نمط 1-2-2-1</h3>
+      <p>في 1-2-2-1: <strong>مقابل الرقمين 2 ألغام، ومقابل الرقمين 1 آمن</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-2-1">
+        <div class="pattern"><span class="s">✓</span><span class="m">💣</span><span class="m">💣</span><span class="s">✓</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>5. لتصبح أسرع: أعلام أقل وفتح سريع أكثر</h3>
+      <p>اللاعبون السريعون يضعون الأعلام اللازمة للفتح السريع فقط، ثم يفتحون مناطق كبيرة بالنقر على الأرقام.</p>
+      <p class="legend">💣 = لغم، ✓ = آمن. تظهر هذه الأنماط غالبًا عند الحواف وبجوار المناطق المفتوحة.</p>
+
+      <h2>ما هي كاسحة الألغام بلا تخمين؟</h2>
+      <p>في اللعبة الكلاسيكية قد تواجه حالة 50/50: أحد مربعين لغم ولا سبيل لمعرفة أيّهما. مع تفعيل <strong>بلا تخمين</strong> تُنشأ اللوحة بعد نقرتك الأولى ويتحقق منها برنامج حل، لذا <strong>يمكن حلها دائمًا بالمنطق وحده</strong>.</p>
+
+      <h2>أسئلة شائعة عن كاسحة الألغام</h2>
+      <h3>هل أحتاج إلى تحميل شيء؟</h3>
+      <p>لا. تعمل اللعبة مباشرة في متصفح الكمبيوتر أو الهاتف بدون تثبيت أو تسجيل.</p>
+      <h3>ماذا تعني الأرقام؟</h3>
+      <p>عدد الألغام في المربعات الثمانية المحيطة. الرقم 1 يعني لغمًا واحدًا بالضبط، والمربع الفارغ لا ألغام حوله ويفتح المنطقة.</p>
+      <h3>هل يمكن أن أدوس لغمًا في النقرة الأولى؟</h3>
+      <p>لا. المربع الأول والمربعات الثمانية حوله خالية دائمًا من الألغام.</p>
+      <h3>ما هو وضع بلا تخمين؟</h3>
+      <p>كل لوحة قابلة للحل بالمنطق وحده، فلن تضطر أبدًا إلى تخمين 50/50.</p>
+      <h3>كيف أضع علمًا على الهاتف؟</h3>
+      <p>اضغط مطولًا على المربع، أو غيّر الوضع أسفل اللوحة إلى «علم» ثم المس. على الكمبيوتر استخدم النقرة اليمنى.</p>
+      <h3>هل تُحفظ أفضل أوقاتي؟</h3>
+      <p>نعم، في متصفح هذا الجهاز، وتُحذف إذا مسحت بيانات التصفح. للمنافسة عالميًا استخدم لوحات الترتيب في التطبيق.</p>
+      <h3>هل هي نفس لعبة كاسحة الألغام الكلاسيكية في Windows؟</h3>
+      <p>نعم: القواعد نفسها وأحجام المبتدئ والمتوسط والخبير نفسها، مع نقرة أولى آمنة دائمًا.</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="langs" aria-label="لغات أخرى">
+      <a href="../" hreflang="zh-TW" lang="zh-Hant-TW" data-lang="zh-TW">繁體中文</a>
+      <a href="../zh-cn/" hreflang="zh-CN" lang="zh-Hans-CN" data-lang="zh-CN">简体中文</a>
+      <a href="../en/" hreflang="en" lang="en" data-lang="en">English</a>
+      <a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a>
+      <a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a>
+      <a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a>
+      <a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      <a href="../pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a>
+      <a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+      <a href="../ar/" hreflang="ar" lang="ar" aria-current="page" data-lang="ar">العربية</a>
+    </nav>
+    <p><a href="../../ar/">ألعاب yusakuron</a>・<a href="../../minesweeper-speed-privacy-policy/">سياسة الخصوصية</a>・<a href="mailto:yusakuron4@gmail.com">اتصل بنا</a></p>
+    <p>© 2026 yusakuron</p>
+  </footer>
+
+  <div id="result" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <button type="button" id="result-close" aria-label="إغلاق">×</button>
+      <h2 id="result-title">🎉 فزت!</h2>
+      <p id="result-time-label">وقتك</p>
+      <p id="result-time">00:00.00</p>
+      <span class="record" id="result-record" hidden>🏆 رقم قياسي جديد!</span>
+      <p id="result-best"></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="result-view">عرض اللوحة</button>
+        <button type="button" class="btn primary" id="result-again">العب مجددًا</button>
+      </div>
+      <div class="cta">
+        <img src="../../minesweeper-speed-icon.png" alt="" width="48" height="48">
+        <div>
+          <p id="result-cta-text"></p>
+          <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=ar&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">حمّل التطبيق مجانًا</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>window.MS_I18N = {"levels":{"beginner":"مبتدئ","intermediate":"متوسط","expert":"خبير"},"boardAria":"لوحة كاسحة الألغام ({level})، {rows} × {cols}، عدد الألغام {mines}","best":"الأفضل {t}","noRecord":"لا يوجد رقم بعد","themeClean":"السمة: عصرية","themeRetro":"السمة: ريترو كلاسيكي","dark":"🌙 داكن","light":"☀️ فاتح","win":"🎉 فزت!","lose":"💥 لقد دست على لغم","bestRecord":"أفضل وقت ({level}): {t}","ctaWin":"أنهيتها في {s} ثانية! حمّل التطبيق ونافس العالم.","ctaLose":"في التطبيق: مغامرة من 100 مستوى، السباق اليومي ولوحات الترتيب العالمية."};</script>
+  <script src="../game.js" defer></script>
+</body>
+</html>

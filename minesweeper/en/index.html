@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Play Minesweeper Online – Free, No Download | Minesweeper Speed</title>
+<meta name="description" content="Play classic Minesweeper online for free – no download, no sign-up. Beginner, Intermediate and Expert boards, a safe first click and a no-guess mode. Rules, tips and FAQ included.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<link rel="alternate" hreflang="zh-TW" href="https://yusakuron4-hub.github.io/minesweeper/">
+<link rel="alternate" hreflang="zh-CN" href="https://yusakuron4-hub.github.io/minesweeper/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<link rel="alternate" hreflang="ja" href="https://yusakuron4-hub.github.io/minesweeper/ja/">
+<link rel="alternate" hreflang="ko" href="https://yusakuron4-hub.github.io/minesweeper/ko/">
+<link rel="alternate" hreflang="es" href="https://yusakuron4-hub.github.io/minesweeper/es/">
+<link rel="alternate" hreflang="fr" href="https://yusakuron4-hub.github.io/minesweeper/fr/">
+<link rel="alternate" hreflang="pt" href="https://yusakuron4-hub.github.io/minesweeper/pt/">
+<link rel="alternate" hreflang="ru" href="https://yusakuron4-hub.github.io/minesweeper/ru/">
+<link rel="alternate" hreflang="ar" href="https://yusakuron4-hub.github.io/minesweeper/ar/">
+<link rel="alternate" hreflang="x-default" href="https://yusakuron4-hub.github.io/minesweeper/en/">
+<meta name="theme-color" content="#F3F0EB">
+<link rel="icon" type="image/png" href="../../minesweeper-speed-icon.png">
+<link rel="apple-touch-icon" href="../../minesweeper-speed-icon.png">
+<link rel="manifest" href="../manifest.json">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Minesweeper Speed">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:url" content="https://yusakuron4-hub.github.io/minesweeper/en/">
+<meta property="og:title" content="Play Minesweeper Online – Free, No Download">
+<meta property="og:description" content="Classic Minesweeper in your browser: Beginner, Intermediate and Expert, safe first click, no-guess logic mode. Beat your best time!">
+<meta property="og:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Play Minesweeper Online – Free, No Download">
+<meta name="twitter:description" content="Classic Minesweeper in your browser: Beginner, Intermediate and Expert, safe first click, no-guess logic mode. Beat your best time!">
+<meta name="twitter:image" content="https://yusakuron4-hub.github.io/minesweeper-speed-feature.png">
+
+<script>
+  // 語系：使用者選過就照選的；第一次來依瀏覽器語言自動選。搜尋引擎爬蟲不轉址。
+  (function () {
+    var LANGS = {"zh-TW":"../","zh-CN":"../zh-cn/","en":"../en/","ja":"../ja/","ko":"../ko/","es":"../es/","fr":"../fr/","pt":"../pt/","ru":"../ru/","ar":"../ar/"};
+    var CUR = 'en';
+    if (/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit/i.test(navigator.userAgent)) return;
+    function detect() {
+      var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < list.length; i++) {
+        var t = String(list[i]).toLowerCase();
+        if (t.indexOf('zh') === 0) return /hans|-cn|-sg|-my/.test(t) && t.indexOf('hant') < 0 ? 'zh-CN' : 'zh-TW';
+        var b = t.split('-')[0];
+        if (LANGS[b]) return b;
+      }
+      return 'en';
+    }
+    var want = null;
+    try { want = JSON.parse(localStorage.getItem('ms_lang')); } catch (e) {}
+    if (!want || !LANGS[want]) {
+      want = detect();
+      try { localStorage.setItem('ms_lang', JSON.stringify(want)); } catch (e) {}
+    }
+    if (want !== CUR) location.replace(LANGS[want] + location.hash);
+  })();
+  // 先套用主題，避免畫面閃一下
+  (function () {
+    var d = document.documentElement;
+    try {
+      var t = JSON.parse(localStorage.getItem('ms_theme'));
+      var k = JSON.parse(localStorage.getItem('ms_dark'));
+      d.dataset.theme = t || 'clean';
+      d.dataset.dark = (k == null ? matchMedia('(prefers-color-scheme: dark)').matches : k) ? '1' : '0';
+    } catch (e) {
+      d.dataset.theme = 'clean';
+      d.dataset.dark = '0';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "VideoGame",
+        "WebApplication"
+      ],
+      "@id": "https://yusakuron4-hub.github.io/minesweeper/en/#game",
+      "name": "Play Minesweeper Online - Minesweeper Speed",
+      "alternateName": [
+        "Minesweeper",
+        "Minesweeper"
+      ],
+      "url": "https://yusakuron4-hub.github.io/minesweeper/en/",
+      "description": "Play classic Minesweeper online for free – no download, no sign-up. Beginner, Intermediate and Expert boards, a safe first click and a no-guess mode. Rules, tips and FAQ included.",
+      "genre": [
+        "Puzzle",
+        "Logic"
+      ],
+      "gamePlatform": [
+        "Web browser",
+        "Android"
+      ],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "playMode": "SinglePlayer",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "image": "https://yusakuron4-hub.github.io/minesweeper-speed-feature.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "yusakuron",
+        "url": "https://yusakuron4-hub.github.io/"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "yusakuron games",
+          "item": "https://yusakuron4-hub.github.io/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Play Minesweeper Online",
+          "item": "https://yusakuron4-hub.github.io/minesweeper/en/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need to download anything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Minesweeper runs right in your browser on desktop and mobile – no download, install or sign-up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do the numbers mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A number shows how many mines are in the 8 squares around it. A 1 means exactly one neighboring mine; a blank square means none and opens the area around it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I hit a mine on the first click?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The square you click first and its 8 neighbors are always mine-free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is no-guess mode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In no-guess mode every board can be solved with logic alone, so you never face a pure 50/50 guess."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I flag on a phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Long-press a square, or switch the mode below the board to “Flag” and tap. On desktop, right-click to flag."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my best times saved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in your browser on this device. They are removed if you clear browsing data. To compete worldwide, get the Minesweeper Speed app with global leaderboards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as classic Windows Minesweeper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes – the same rules and the same Beginner, Intermediate and Expert board sizes, plus a guaranteed safe first click."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../en/">
+      <img src="../../minesweeper-speed-icon.png" alt="" width="32" height="32">
+      <span class="brand-name">Minesweeper Speed</span>
+    </a>
+    <label class="lang-select">
+      <span aria-hidden="true">🌐</span>
+      <select id="lang" aria-label="Language">
+        <option value="zh-TW" data-href="../">繁體中文</option>
+        <option value="zh-CN" data-href="../zh-cn/">简体中文</option>
+        <option value="en" data-href="../en/" selected>English</option>
+        <option value="ja" data-href="../ja/">日本語</option>
+        <option value="ko" data-href="../ko/">한국어</option>
+        <option value="es" data-href="../es/">Español</option>
+        <option value="fr" data-href="../fr/">Français</option>
+        <option value="pt" data-href="../pt/">Português</option>
+        <option value="ru" data-href="../ru/">Русский</option>
+        <option value="ar" data-href="../ar/">العربية</option>
+      </select>
+    </label>
+    <a class="get-app" data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=en&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Get the app</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Play Minesweeper Online</h1>
+      <p>Free, no download, starts instantly. Your first click is always safe, plus an optional no-guess mode.</p>
+    </section>
+
+    <section id="game" aria-label="Minesweeper game" data-status="ready">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Difficulty">
+          <button type="button" data-level="beginner">Beginner</button>
+          <button type="button" data-level="intermediate">Intermediate</button>
+          <button type="button" data-level="expert">Expert</button>
+        </div>
+        <label class="toggle" title="Every board can be solved with logic alone">
+          <input type="checkbox" id="noguess"> No-guess
+        </label>
+        <span class="spacer"></span>
+        <button type="button" class="chip-btn" id="theme-btn">Theme: Clean</button>
+        <button type="button" class="chip-btn" id="dark-btn">🌙 Dark</button>
+      </div>
+
+      <div class="hud">
+        <div class="counter" aria-label="Mines left">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pole" d="M7 3.5v17" /><path class="cloth" d="M8 4l10 4.2L8 12.4z" /><path class="pole" d="M4.5 20.5h6" /></svg>
+          <span id="mine-counter">10</span>
+        </div>
+        <button type="button" id="reset" aria-label="New game"></button>
+        <div class="counter time" aria-label="Time"><span id="timer">00:00.00</span></div>
+      </div>
+
+      <div id="board-wrap">
+        <div id="board" role="grid" aria-label="Minesweeper board"></div>
+      </div>
+
+      <div class="below">
+        <div class="seg" role="group" aria-label="Tap mode">
+          <button type="button" data-mode="dig">⛏️ Dig</button>
+          <button type="button" data-mode="flag">🚩 Flag</button>
+        </div>
+        <span class="spacer"></span>
+        <span id="best">No record yet</span>
+      </div>
+      <p class="hint">Desktop: left-click to dig, right-click to flag, click a number to chord. Mobile: tap to dig, long-press to flag. Press N for a new game.</p>
+    </section>
+
+    <aside class="app-banner" aria-label="Get the app">
+      <img src="../../minesweeper-speed-icon.png" alt="Minesweeper Speed app icon" width="64" height="64" loading="lazy">
+      <div>
+        <h2>Want more? Get the Minesweeper Speed app</h2>
+        <p>100-level Adventure · Daily Race · Google Play Games leaderboards &amp; 25 achievements · Replays</p>
+      </div>
+      <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=en&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Free download</a>
+    </aside>
+
+    <article>
+      <h2>How to play Minesweeper</h2>
+      <ol>
+        <li><strong>Goal</strong>: open every square that is <strong>not a mine</strong>. Hit a mine and the game is over.</li>
+        <li><strong>Numbers</strong>: a number tells you how many mines touch that square among its <strong>8 neighbors</strong> (including diagonals).</li>
+        <li><strong>Blank squares</strong> have no neighboring mines and automatically open the area around them.</li>
+        <li><strong>Flags</strong>: mark squares you are sure are mines so you don’t click them by accident. The counter shows mines minus flags.</li>
+        <li><strong>Chording</strong>: when a number already has that many flags around it, click the number to open all its other neighbors at once. A wrong flag means a mine – careful!</li>
+      </ol>
+
+      <h2>Controls</h2>
+      <table>
+        <thead><tr><th>Action</th><th>Desktop</th><th>Mobile</th></tr></thead>
+        <tbody>
+          <tr><td>Open a square</td><td>Left click</td><td>Tap</td></tr>
+          <tr><td>Flag / unflag</td><td>Right click</td><td>Long-press, or switch to Flag mode and tap</td></tr>
+          <tr><td>Chord (open neighbors)</td><td>Click an opened number (any mouse button)</td><td>Tap an opened number</td></tr>
+          <tr><td>New game</td><td>Smiley button, or N / F2</td><td>Smiley button</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Difficulty levels</h2>
+      <table>
+        <thead><tr><th>Level</th><th>Board</th><th>Mines</th><th>Density</th></tr></thead>
+        <tbody>
+          <tr><td>Beginner</td><td>9 × 9</td><td>10</td><td>≈ 12%</td></tr>
+          <tr><td>Intermediate</td><td>16 × 16</td><td>40</td><td>≈ 16%</td></tr>
+          <tr><td>Expert</td><td>16 × 30 (30 × 16 on portrait phones)</td><td>99</td><td>≈ 21%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Minesweeper tips for beginners</h2>
+      <h3>1. Look for satisfied numbers</h3>
+      <p>If a number already has as many flags as its value, every other hidden neighbor is safe – open them or just chord the number.</p>
+
+      <h3>2. Hidden squares = number? All mines</h3>
+      <p>If a “3” has exactly three hidden neighbors left, all three are mines. Flag them.</p>
+
+      <h3>3. The 1-2-1 pattern</h3>
+      <p>A row of 1-2-1 along a row of hidden squares: <strong>the squares facing the 1s are mines and the one facing the 2 is safe</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-1">
+        <div class="pattern"><span class="m">💣</span><span class="s">✓</span><span class="m">💣</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>4. The 1-2-2-1 pattern</h3>
+      <p>For 1-2-2-1: <strong>the squares facing the two 2s are mines, the ones facing the 1s are safe</strong>.</p>
+      <div class="pattern-grid" aria-label="1-2-2-1">
+        <div class="pattern"><span class="s">✓</span><span class="m">💣</span><span class="m">💣</span><span class="s">✓</span></div>
+        <div class="pattern"><span>1</span><span>2</span><span>2</span><span>1</span></div>
+      </div>
+
+      <h3>5. Want to be faster? Flag less, chord more</h3>
+      <p>Fast players only flag mines they need for chording, then open large areas by clicking numbers. It saves a lot of clicks.</p>
+      <p class="legend">💣 = mine, ✓ = safe. These patterns show up most often along edges and next to opened areas.</p>
+
+      <h2>What is no-guess Minesweeper?</h2>
+      <p>Classic Minesweeper sometimes leaves you with a 50/50: one of two squares is a mine and there is no way to tell which. With <strong>No-guess</strong> on, the board is generated after your first click and checked by a solver, so it is <strong>always solvable with pure logic</strong>. Winning depends only on your reasoning and speed.</p>
+
+      <h2>Minesweeper FAQ</h2>
+      <h3>Do I need to download anything?</h3>
+      <p>No. Minesweeper runs right in your browser on desktop and mobile – no download, install or sign-up.</p>
+      <h3>What do the numbers mean?</h3>
+      <p>A number shows how many mines are in the 8 squares around it. A 1 means exactly one neighboring mine; a blank square means none and opens the area around it.</p>
+      <h3>Can I hit a mine on the first click?</h3>
+      <p>No. The square you click first and its 8 neighbors are always mine-free.</p>
+      <h3>What is no-guess mode?</h3>
+      <p>In no-guess mode every board can be solved with logic alone, so you never face a pure 50/50 guess.</p>
+      <h3>How do I flag on a phone?</h3>
+      <p>Long-press a square, or switch the mode below the board to “Flag” and tap. On desktop, right-click to flag.</p>
+      <h3>Are my best times saved?</h3>
+      <p>Yes, in your browser on this device. They are removed if you clear browsing data. To compete worldwide, get the Minesweeper Speed app with global leaderboards.</p>
+      <h3>Is this the same as classic Windows Minesweeper?</h3>
+      <p>Yes – the same rules and the same Beginner, Intermediate and Expert board sizes, plus a guaranteed safe first click.</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="langs" aria-label="Other languages">
+      <a href="../" hreflang="zh-TW" lang="zh-Hant-TW" data-lang="zh-TW">繁體中文</a>
+      <a href="../zh-cn/" hreflang="zh-CN" lang="zh-Hans-CN" data-lang="zh-CN">简体中文</a>
+      <a href="../en/" hreflang="en" lang="en" aria-current="page" data-lang="en">English</a>
+      <a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a>
+      <a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a>
+      <a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a>
+      <a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      <a href="../pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a>
+      <a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+      <a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a>
+    </nav>
+    <p><a href="../../en/">yusakuron games</a>・<a href="../../minesweeper-speed-privacy-policy/">Privacy policy</a>・<a href="mailto:yusakuron4@gmail.com">Contact</a></p>
+    <p>© 2026 yusakuron</p>
+  </footer>
+
+  <div id="result" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <button type="button" id="result-close" aria-label="Close">×</button>
+      <h2 id="result-title">🎉 Cleared!</h2>
+      <p id="result-time-label">Your time</p>
+      <p id="result-time">00:00.00</p>
+      <span class="record" id="result-record" hidden>🏆 New record!</span>
+      <p id="result-best"></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="result-view">View board</button>
+        <button type="button" class="btn primary" id="result-again">Play again</button>
+      </div>
+      <div class="cta">
+        <img src="../../minesweeper-speed-icon.png" alt="" width="48" height="48">
+        <div>
+          <p id="result-cta-text"></p>
+          <a data-play href="https://play.google.com/store/apps/details?id=com.yusakuron.minesweeper.speed&amp;hl=en&amp;referrer=utm_source%3Dweb%26utm_medium%3Dminesweeper">Get the free app</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>window.MS_I18N = {"levels":{"beginner":"Beginner","intermediate":"Intermediate","expert":"Expert"},"boardAria":"{level} Minesweeper board, {rows} rows × {cols} columns, {mines} mines","best":"Best {t}","noRecord":"No record yet","themeClean":"Theme: Clean","themeRetro":"Theme: Classic Retro","dark":"🌙 Dark","light":"☀️ Light","win":"🎉 Cleared!","lose":"💥 Boom! You hit a mine","bestRecord":"{level} best: {t}","ctaWin":"You did it in {s} s! Get the app and race the world.","ctaLose":"Get the app: 100-level Adventure, Daily Race and global leaderboards."};</script>
+  <script src="../game.js" defer></script>
+</body>
+</html>
